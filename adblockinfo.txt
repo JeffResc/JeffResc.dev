@@ -1,8 +1,0 @@
-! Homepage: https://jeffresc.github.io/adblocklist.txt
-! Title: The one's that slipped away (Ads not caught by main lists and also blocks the "using adblock" image)
-! Expires: 5 days
-! Version: 1
-spanishdict.com##div[class^="ad"]
-spanishdict.com##div[class^="whitelist"]
-spanishdict.com##div[data-target^="ad"]
-rockingsoccer.com##h3[class="pwadh"]
