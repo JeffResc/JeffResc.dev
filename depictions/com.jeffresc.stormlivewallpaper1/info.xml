@@ -1,0 +1,28 @@
+<package>
+	<id>com.jeffresc.stormlivewallpaper1</id>
+	<name>Full Package</name>
+	<version>1.0.0</version>
+	<compatibility>
+		<firmware>
+			<miniOS>10.0</miniOS>
+		</firmware>
+	</compatibility>
+	<dependencies>
+		<package>mobilesubstrate</package>
+		<package>com.matchstic.xenhtml</package>
+	</dependencies>
+	<shortDescription>A Live Storm Wallpaper using XenHTML</shortDescription>
+	<descriptionlist>
+		<description>Live Storm Wallpaper #1</description>
+		<description>A Live Storm Wallpaper using XenHTML</description>
+	</descriptionlist>
+	<screenshots>
+		<screenshot>
+			<description>This will be the displayed wallpaper</description>
+			<image>1.gif</image>
+		</screenshot>	
+	</screenshots>
+	<changelog>
+		<change>Initial Release!</change>
+	</changelog>
+</package>

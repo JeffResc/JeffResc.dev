@@ -1,0 +1,195 @@
+Package: com.jeffresc.stormlivewallpaper1
+Version: 1.0.0
+Section: Live Wallpapers (XenHTML)
+Maintainer: JeffResc <jeff@jeffresc.com>
+Depends: firmware (>10.0), mobilesubstrate, com.matchstic.xenhtml
+Architecture: iphoneos-arm
+Filename: ./debs/com.jeffresc.stormlivewallpaper1_1.0.0_iphoneos-arm.deb
+Size: 22559890 
+MD5sum: 78815CEC813FFCDFDA5CA1734E0A6BF6
+Description: A Live Storm Wallpaper using XenHTML
+Name: Live Storm Wallpaper #1
+Author: JeffResc <jeff@jeffresc.com>
+Depiction: https://delta.jeffresc.com/depictions/?p=com.jeffresc.stormlivewallpaper1
+
+Package: com.jeffresc.stormlivewallpaper2
+Version: 1.0.0
+Section: Live Wallpapers (XenHTML)
+Maintainer: JeffResc <jeff@jeffresc.com>
+Depends: firmware (>10.0), mobilesubstrate, com.matchstic.xenhtml
+Architecture: iphoneos-arm
+Filename: ./debs/com.jeffresc.stormlivewallpaper2_1.0.0_iphoneos-arm.deb
+Size: 14870016 
+MD5sum: A845CB802EA5368E2A4C9AD10CE5ED48
+Description: A Live Storm Wallpaper using XenHTML
+Name: Live Storm Wallpaper #2
+Author: JeffResc <jeff@jeffresc.com>
+Depiction: https://delta.jeffresc.com/depictions/?p=com.jeffresc.stormlivewallpaper2
+
+Package: com.jeffresc.stormlivewallpaper3
+Version: 1.0.0
+Section: Live Wallpapers (XenHTML)
+Maintainer: JeffResc <jeff@jeffresc.com>
+Depends: firmware (>10.0), mobilesubstrate, com.matchstic.xenhtml
+Architecture: iphoneos-arm
+Filename: ./debs/com.jeffresc.stormlivewallpaper3_1.0.0_iphoneos-arm.deb
+Size: 21879576 
+MD5sum: C38D64DE999E9868E3ABA2E3778304E8
+Description: A Live Storm Wallpaper using XenHTML
+Name: Live Storm Wallpaper #3
+Author: JeffResc <jeff@jeffresc.com>
+Depiction: https://delta.jeffresc.com/depictions/?p=com.jeffresc.stormlivewallpaper3
+
+Package: com.jeffresc.stormlivewallpaper4
+Version: 1.0.0
+Section: Live Wallpapers (XenHTML)
+Maintainer: JeffResc <jeff@jeffresc.com>
+Depends: firmware (>10.0), mobilesubstrate, com.matchstic.xenhtml
+Architecture: iphoneos-arm
+Filename: ./debs/com.jeffresc.stormlivewallpaper4_1.0.0_iphoneos-arm.deb
+Size: 14261984 
+MD5sum: 8C7C56532AFB89F31936104056315001
+Description: A Live Storm Wallpaper using XenHTML
+Name: Live Storm Wallpaper #4
+Author: JeffResc <jeff@jeffresc.com>
+Depiction: https://delta.jeffresc.com/depictions/?p=com.jeffresc.stormlivewallpaper4
+
+Package: com.jeffresc.stormlivewallpaper5
+Version: 1.0.0
+Section: Live Wallpapers (XenHTML)
+Maintainer: JeffResc <jeff@jeffresc.com>
+Depends: firmware (>10.0), mobilesubstrate, com.matchstic.xenhtml
+Architecture: iphoneos-arm
+Filename: ./debs/com.jeffresc.stormlivewallpaper5_1.0.0_iphoneos-arm.deb
+Size: 19613988 
+MD5sum: DE66914FBD8A25336A3BCFCF400025EF
+Description: A Live Storm Wallpaper using XenHTML
+Name: Live Storm Wallpaper #5
+Author: JeffResc <jeff@jeffresc.com>
+Depiction: https://delta.jeffresc.com/depictions/?p=com.jeffresc.stormlivewallpaper5
+
+Package: com.jeffresc.stormlivewallpaper6
+Version: 1.0.0
+Section: Live Wallpapers (XenHTML)
+Maintainer: JeffResc <jeff@jeffresc.com>
+Depends: firmware (>10.0), mobilesubstrate, com.matchstic.xenhtml
+Architecture: iphoneos-arm
+Filename: ./debs/com.jeffresc.stormlivewallpaper6_1.0.0_iphoneos-arm.deb
+Size: 12998088 
+MD5sum: CA155D848F2ACBF72523DCCE7399A3F3
+Description: A Live Storm Wallpaper using XenHTML
+Name: Live Storm Wallpaper #6
+Author: JeffResc <jeff@jeffresc.com>
+Depiction: https://delta.jeffresc.com/depictions/?p=com.jeffresc.stormlivewallpaper6
+
+Package: com.jeffresc.stormlivewallpaper7
+Version: 1.0.0
+Section: Live Wallpapers (XenHTML)
+Maintainer: JeffResc <jeff@jeffresc.com>
+Depends: firmware (>10.0), mobilesubstrate, com.matchstic.xenhtml
+Architecture: iphoneos-arm
+Filename: ./debs/com.jeffresc.stormlivewallpaper7_1.0.0_iphoneos-arm.deb
+Size: 17165750 
+MD5sum: 6F744EEC7216B6BA31ECC973EC1F4085
+Description: A Live Storm Wallpaper using XenHTML
+Name: Live Storm Wallpaper #7
+Author: JeffResc <jeff@jeffresc.com>
+Depiction: https://delta.jeffresc.com/depictions/?p=com.jeffresc.stormlivewallpaper7
+
+Package: com.jeffresc.stormlivewallpaper8
+Version: 1.0.0
+Section: Live Wallpapers (XenHTML)
+Maintainer: JeffResc <jeff@jeffresc.com>
+Depends: firmware (>10.0), mobilesubstrate, com.matchstic.xenhtml
+Architecture: iphoneos-arm
+Filename: ./debs/com.jeffresc.stormlivewallpaper8_1.0.0_iphoneos-arm.deb
+Size: 9453302 
+MD5sum: 22B3CC9FF49FB76E1894D06A616897B0
+Description: A Live Storm Wallpaper using XenHTML
+Name: Live Storm Wallpaper #8
+Author: JeffResc <jeff@jeffresc.com>
+Depiction: https://delta.jeffresc.com/depictions/?p=com.jeffresc.stormlivewallpaper8
+
+Package: com.jeffresc.stormlivewallpaper9
+Version: 1.0.0
+Section: Live Wallpapers (XenHTML)
+Maintainer: JeffResc <jeff@jeffresc.com>
+Depends: firmware (>10.0), mobilesubstrate, com.matchstic.xenhtml
+Architecture: iphoneos-arm
+Filename: ./debs/com.jeffresc.stormlivewallpaper9_1.0.0_iphoneos-arm.deb
+Size: 18008434 
+MD5sum: 91ECDC15267929E5F75C9CCCE5B0FD86
+Description: A Live Storm Wallpaper using XenHTML
+Name: Live Storm Wallpaper #9
+Author: JeffResc <jeff@jeffresc.com>
+Depiction: https://delta.jeffresc.com/depictions/?p=com.jeffresc.stormlivewallpaper9
+
+Package: com.jeffresc.stormlivewallpaper10
+Version: 1.0.0
+Section: Live Wallpapers (XenHTML)
+Maintainer: JeffResc <jeff@jeffresc.com>
+Depends: firmware (>10.0), mobilesubstrate, com.matchstic.xenhtml
+Architecture: iphoneos-arm
+Filename: ./debs/com.jeffresc.stormlivewallpaper10_1.0.0_iphoneos-arm.deb
+Size: 19299714 
+MD5sum: B9054487BAAC79F92FB18DE8003545E4
+Description: A Live Storm Wallpaper using XenHTML
+Name: Live Storm Wallpaper #10
+Author: JeffResc <jeff@jeffresc.com>
+Depiction: https://delta.jeffresc.com/depictions/?p=com.jeffresc.stormlivewallpaper10
+
+Package: com.jeffresc.stormlivewallpaper11
+Version: 1.0.0
+Section: Live Wallpapers (XenHTML)
+Maintainer: JeffResc <jeff@jeffresc.com>
+Depends: firmware (>10.0), mobilesubstrate, com.matchstic.xenhtml
+Architecture: iphoneos-arm
+Filename: ./debs/com.jeffresc.stormlivewallpaper11_1.0.0_iphoneos-arm.deb
+Size: 18232760 
+MD5sum: 39637B6A4F4D25253C45D230AEE9F940
+Description: A Live Storm Wallpaper using XenHTML
+Name: Live Storm Wallpaper #11
+Author: JeffResc <jeff@jeffresc.com>
+Depiction: https://delta.jeffresc.com/depictions/?p=com.jeffresc.stormlivewallpaper11
+
+Package: com.jeffresc.stormlivewallpaper12
+Version: 1.0.0
+Section: Live Wallpapers (XenHTML)
+Maintainer: JeffResc <jeff@jeffresc.com>
+Depends: firmware (>10.0), mobilesubstrate, com.matchstic.xenhtml
+Architecture: iphoneos-arm
+Filename: ./debs/com.jeffresc.stormlivewallpaper12_1.0.0_iphoneos-arm.deb
+Size: 12846600 
+MD5sum: CBABA067FCCDCDBD7F03A136181BAAA2
+Description: A Live Storm Wallpaper using XenHTML
+Name: Live Storm Wallpaper #12
+Author: JeffResc <jeff@jeffresc.com>
+Depiction: https://delta.jeffresc.com/depictions/?p=com.jeffresc.stormlivewallpaper12
+
+Package: com.jeffresc.stormlivewallpaper13
+Version: 1.0.0
+Section: Live Wallpapers (XenHTML)
+Maintainer: JeffResc <jeff@jeffresc.com>
+Depends: firmware (>10.0), mobilesubstrate, com.matchstic.xenhtml, com.matchstic.xenhtml
+Architecture: iphoneos-arm
+Filename: ./debs/com.jeffresc.stormlivewallpaper13_1.0.0-1_iphoneos-arm.deb
+Size: 13997430 
+MD5sum: 31C5679BFD5B4F0026BEE95BF2E784BF
+Description: A Live Storm Wallpaper using XenHTML
+Name: Live Storm Wallpaper #13
+Author: JeffResc <jeff@jeffresc.com>
+Depiction: https://delta.jeffresc.com/depictions/?p=com.jeffresc.stormlivewallpaper13
+
+Package: com.jeffresc.stormlivewallpaper14
+Version: 1.0.0
+Section: Live Wallpapers (XenHTML)
+Maintainer: JeffResc <jeff@jeffresc.com>
+Depends: firmware (>10.0), mobilesubstrate, com.matchstic.xenhtml
+Architecture: iphoneos-arm
+Filename: ./debs/com.jeffresc.stormlivewallpaper14_1.0.0_iphoneos-arm.deb
+Size: 6389652 
+MD5sum: F20DC6F52B5EB6AAD9E81090954BD21E
+Description: A Live Storm Wallpaper using XenHTML
+Name: Live Storm Wallpaper #14
+Author: JeffResc <jeff@jeffresc.com>
+Depiction: https://delta.jeffresc.com/depictions/?p=com.jeffresc.stormlivewallpaper14
