@@ -8,7 +8,17 @@
 		<link>
 			<name>Visit My Website</name>
 			<url>https://jeffresc.com/</url>
-			<iconclass>fa fa-thumbs-up</iconclass>
+			<iconclass>fa fa-globe</iconclass>
+		</link>
+		<link>
+			<name>Visit My Github</name>
+			<url>https://github.com/JeffResc</url>
+			<iconclass>fa fa-github-square</iconclass>
+		</link>
+		<link>
+			<name>Add This Repo to Cydia</name>
+			<url>cydia://url/https://cydia.saurik.com/api/share#?source=http://delta.jeffresc.com/</url>
+			<iconclass>fa fa-plus</iconclass>
 		</link>
 	</footerlinks>
 </repo>
