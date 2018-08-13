@@ -1,0 +1,25 @@
+<package>
+	<id>com.jeffresc.unsplashwallsxi</id>
+	<name>UnsplashWallsXI</name>
+	<version>1.0.5</version>
+	<compatibility>
+		<firmware>
+			<miniOS>10.0</miniOS>
+		</firmware>
+	</compatibility>
+	<shortDescription>UnsplashWallsXI</shortDescription>
+	<descriptionlist>
+		<description>Set your wallpaper to random images from Unsplash easily within the Settings Application!</description>
+		<description>Based on the original UnsplashWalls by ipadkid358.</description>
+		<description>Please Note: The settings app will “crash” after setting the wallpaper. This is intentional as without this feature, SpringBoard could freeze for up to 30 seconds and reliablility would be decreased.</description>
+	</descriptionlist>
+	<screenshots>
+		<screenshot>
+			<description>Demo</description>
+			<image>1.gif</image>
+		</screenshot>	
+	</screenshots>
+	<changelog>
+		<change>Initial Release!</change>
+	</changelog>
+</package>

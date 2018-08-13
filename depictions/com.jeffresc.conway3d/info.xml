@@ -1,0 +1,28 @@
+<package>
+	<id>com.jeffresc.conway3d</id>
+	<name>Conway3D</name>
+	<version>1.0.0</version>
+	<compatibility>
+		<firmware>
+			<miniOS>10.0</miniOS>
+		</firmware>
+	</compatibility>
+	<dependencies>
+		<package>XenHTML</package>
+	</dependencies>
+	<shortDescription>A Live Wallpaper by Ominousness Converted to XenHTML</shortDescription>
+	<descriptionlist>
+		<description>All I did was adapt the code for XenHTML and package it for easy download.</description>
+		<description>I am not responsible for the lag or battery drain that this may cause. Use at your own risk.</description>
+		<description>In order to use Conway3D, please install XenHTML from xenpublic.incendo.ws.</description>
+	</descriptionlist>
+	<screenshots>
+		<screenshot>
+			<description>Demo</description>
+			<image>1.gif</image>
+		</screenshot>	
+	</screenshots>
+	<changelog>
+		<change>Initial Release!</change>
+	</changelog>
+</package>

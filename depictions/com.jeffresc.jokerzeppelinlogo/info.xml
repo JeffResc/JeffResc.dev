@@ -1,0 +1,20 @@
+<package>
+	<id>com.jeffresc.jokerzeppelinlogo</id>
+	<name>Joker Zeppelin Logo</name>
+	<version>1.0.0</version>
+	<compatibility>
+		<firmware>
+			<miniOS>10.0</miniOS>
+		</firmware>
+	</compatibility>
+	<dependencies>
+		<package>Zeppelin</package>
+	</dependencies>
+	<shortDescription>Joker Zeppelin Logo</shortDescription>
+	<descriptionlist>
+		<description>Joker Zeppelin Logo</description>
+	</descriptionlist>
+	<changelog>
+		<change>Initial Release!</change>
+	</changelog>
+</package>

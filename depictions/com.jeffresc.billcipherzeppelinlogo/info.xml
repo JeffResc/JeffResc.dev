@@ -1,0 +1,21 @@
+<package>
+	<id>com.jeffresc.billcipherzeppelinlogo</id>
+	<name>Bill Cipher Zeppelin Logo</name>
+	<version>1.0.0</version>
+	<compatibility>
+		<firmware>
+			<miniOS>10.0</miniOS>
+		</firmware>
+	</compatibility>
+	<dependencies>
+		<package>Zeppelin</package>
+	</dependencies>
+	<shortDescription>Bill Cipher Zeppelin Logo</shortDescription>
+	<descriptionlist>
+		<description>Bill Cipher Zeppelin Logo featuring two icons</description>
+		<description>Thanks to @JBThemesCydia for the idea!</description>
+	</descriptionlist>
+	<changelog>
+		<change>Initial Release!</change>
+	</changelog>
+</package>

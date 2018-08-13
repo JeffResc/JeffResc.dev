@@ -1,0 +1,20 @@
+<package>
+	<id>com.jeffresc.predatorzeppelinlogo</id>
+	<name>Predator Zeppelin Logo</name>
+	<version>1.0.0</version>
+	<compatibility>
+		<firmware>
+			<miniOS>10.0</miniOS>
+		</firmware>
+	</compatibility>
+	<dependencies>
+		<package>Zeppelin</package>
+	</dependencies>
+	<shortDescription>Predator Zeppelin Logo</shortDescription>
+	<descriptionlist>
+		<description>Predator Zeppelin Logo</description>
+	</descriptionlist>
+	<changelog>
+		<change>Initial Release!</change>
+	</changelog>
+</package>

@@ -1,0 +1,26 @@
+<package>
+	<id>com.jeffresc.rickandmortyanimatedrespringlogo</id>
+	<name>Rick and Morty Animated Respring Logo</name>
+	<version>1.0.0</version>
+	<compatibility>
+		<firmware>
+			<miniOS>10.0</miniOS>
+		</firmware>
+	</compatibility>
+	<dependencies>
+		<package>Anemone</package>
+	</dependencies>
+	<shortDescription>Rick and Morty Animated Respring Logo</shortDescription>
+	<descriptionlist>
+		<description>Rick and Morty Animated Respring Logo</description>
+	</descriptionlist>
+	<screenshots>
+		<screenshot>
+			<description>This will be the displayed respring animation</description>
+			<image>1.gif</image>
+		</screenshot>	
+	</screenshots>
+	<changelog>
+		<change>Initial Release!</change>
+	</changelog>
+</package>
