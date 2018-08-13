@@ -1,8 +1,8 @@
-Origin: Delta Repo by JeffResc
-Label: Delta Repo by JeffResc
+Origin: Delta Developments
+Label: Delta Developments
 Suite: stable
 Version: 1.0
 Codename: ios
 Architectures: iphoneos-arm
 Components: main
-Description: Delta by JeffResc
+Description: Delta Developments
