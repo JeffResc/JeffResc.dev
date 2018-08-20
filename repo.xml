@@ -20,10 +20,5 @@
 			<url>cydia://url/https://cydia.saurik.com/api/share#?source=http://delta.jeffresc.com/</url>
 			<iconclass>fa fa-plus</iconclass>
 		</link>
-		<link>
-			<name>Join The Discussion!</name>
-			<url>https://discord.gg/tvJJHFd</url>
-			<iconclass>fa fa-users</iconclass>
-		</link>
 	</footerlinks>
 </repo>
