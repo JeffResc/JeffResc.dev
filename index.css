@@ -554,13 +554,13 @@ body {
       rgba(10, 10, 10, 0.3),
       rgb(10, 10, 10, 1)
     ),
-    url("jeffresc.github.io");
+    url("/img/ocean-waves-crashing-on-rocks-3591558.jpg");
   --background-background: linear-gradient(
       0deg,
       rgba(10, 10, 10, 1),
       rgba(10, 10, 10, 0.6)
     ),
-    url("jeffresc.github.io") center center fixed;
+    url("/img/ocean-waves-crashing-on-rocks-3591558.jpg") center center fixed;
   --height: 50vh;
 }
 
@@ -591,6 +591,6 @@ body {
         rgba(10, 10, 10, 1),
         rgba(10, 10, 10, 0)
       ),
-      url("jeffresc.github.io") !important;
+      url("/img/ocean-waves-crashing-on-rocks-3591558.jpg") !important;
   }
 }
