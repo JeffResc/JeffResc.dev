@@ -8,11 +8,8 @@
   "includeFork": false,
   "theme": "dark.css",
   "types": [
-   "owner"
+   "all"
   ],
-  "twitter": "JeffRescignano",
-  "linkedin": null,
-  "medium": null,
-  "dribbble": null
+  "twitter": "JeffRescignano"
  }
 ]
