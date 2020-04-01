@@ -554,13 +554,13 @@ body {
       rgba(10, 10, 10, 0.3),
       rgb(10, 10, 10, 1)
     ),
-    url("https://images.pexels.com/photos/3591558/pexels-photo-3591558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    url("jeffresc.github.io");
   --background-background: linear-gradient(
       0deg,
       rgba(10, 10, 10, 1),
       rgba(10, 10, 10, 0.6)
     ),
-    url("https://images.pexels.com/photos/3591558/pexels-photo-3591558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") center center fixed;
+    url("jeffresc.github.io") center center fixed;
   --height: 50vh;
 }
 
@@ -591,6 +591,6 @@ body {
         rgba(10, 10, 10, 1),
         rgba(10, 10, 10, 0)
       ),
-      url("https://images.pexels.com/photos/3591558/pexels-photo-3591558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") !important;
+      url("jeffresc.github.io") !important;
   }
 }

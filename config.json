@@ -4,8 +4,8 @@
   "name": "Jeff Rescignano",
   "userimg": "https://avatars1.githubusercontent.com/u/5752328?v=4",
   "sort": "star",
-  "order": "asc",
-  "includeFork": true,
+  "order": "desc",
+  "includeFork": false,
   "theme": "dark.css",
   "types": [
    "owner"
