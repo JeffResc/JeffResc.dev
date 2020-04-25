@@ -12,19 +12,20 @@
 	<body>
 		<h1>SongShare Legal</h1>
 		<h3>Software Notice</h3>
-		<p>By installing and enabling SongShare, you agree that any text copied on your device that contains one of the following domains may be sent out to third party processing software such as SongLink or SongWhip:</p>
+		<p>By installing and enabling SongShare, you agree that any text copied on your device that matches one of the following regex statements may be sent out to third party processing software such as SongLink or SongWhip:</p>
 		<ul>
-			<li>(open/play).spotify.com</li>
-			<li>(itunes/music).apple.com</li>
-			<li>(www.)itun.es</li>
-			<li>music.amazon.com</li>
-			<li>(www.)deezer.com</li>
-			<li>play.google.com</li>
-			<li>(www.)youtube.com</li>
-			<li>(www.)youtu.be</li>
-			<li>(www.)soundcloud.com</li>
-			<li>(www.)napster.com</li>
-			<li>(www.)npstr.cm</li>
+			<li>(https?://)?(music\\.|www\\.)?amazon.(com\\.br|ca|com\\.mx|com|cn|in|co\\.jp|sg|com\\.tr|ae|fr|de|it|nl|es|co\\.uk|com\\.au)/.+</li>
+			<li>((https?://)?music.apple.com/[a-zA-Z]{2}/(track|album|artist)/[a-zA-Z0-9-_]+/[0-9]+(/?)</li>
+			<li>(https?://)?itunes.apple.com/[a-zA-Z]{2}/(track|album|artist)/[a-zA-Z0-9-_]+/(id)?[0-9]+(/?)</li>
+			<li>(https?://)?(www\\.)?deezer.com/(track|album|artist)/[0-9]+(/?)</li>
+			<li>(https?://)?play.google.com(/?)(store)?/music/[a-zA-Z0-9-_]+(/?)</li>
+			<li>(https?://)?([a-zA-Z]{2}\\.|www\\.)?napster.com/artist/[a-zA-Z0-9-_]+/.+</li>
+			<li>(https?://)?(www\\.|m\\.)?soundcloud.com/[a-zA-Z0-9-_]+(/?)</li>
+			<li>(https?://)?(www\\.)?spinrilla.com/(songs|mixtapes)/[a-zA-Z0-9-_]+(/?</li>
+			<li>(https?://(open|play).spotify.com/(track|artist|album)/[a-zA-Z0-9]+(/playlist/[a-zA-Z0-9]+|)|spotify:(track|artist|album):[a-zA-Z0-9]+(:playlist:[a-zA-Z0-9]+|))</li>
+			<li>(https?://)?listen.tidal.com/(track|album|artist)/[0-9]+(/?)</li>
+			<li>(https?://)?music.yandex.(com|ru)/(track|album|artist)/[0-9]+(/?)(track|album|artist)?([0-9]+?)(/?)</li>
+			<li>(https?://)?(www\\.|m\\.|music\\.)?youtu(be\\.com|\\.be)(\\/watch\\?([&=a-z]{0,})(v=[\\d\\w]{1,}).+|\\/[\\d\\w]{1,})</li>
 		</ul>
 		<p>In addition to the URL, the user's country code will be sent to the third party services as the country code is required by their API. Users that do not wish to disclose this information should remove the software from their device immediately.</p>
 		<h3>Additional Policies</h3>
