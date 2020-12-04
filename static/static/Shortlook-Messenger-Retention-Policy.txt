@@ -1,1 +1,0 @@
-This app does not store any user data. Any recieved user data is used during the request process, but is only stored in memory and deleted shortly after.
