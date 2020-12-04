@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jeff Rescignano | JeffResc</title>
+  <meta name="description" content="Jeff Rescignano | JeffResc">
+  <meta property="og:title" content="Jeff Rescignano | JeffResc" />
+  <meta property="og:image" content="/img/Banner.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="https://avatars1.githubusercontent.com/u/5752328?v=4" type="image/png">
+  <!-- Matomo -->
+  <script type="text/javascript">
+    var _paq = window._paq || [];
+    _paq.push(['enableHeartBeatTimer']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function () {
+      var u = "https://analytics.jeffresc.dev/";
+      _paq.push(['setTrackerUrl', u + 'matomo.php']);
+      _paq.push(['setSiteId', '1']);
+      var d = document,
+        g = d.createElement('script'),
+        s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript';
+      g.async = true;
+      g.defer = true;
+      g.src = u + 'matomo.js';
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+</head>
+
+<body>
+  <noscript>
+    <!-- Matomo Image Tracker-->
+    <img src="https://analytics.jeffresc.dev/matomo.php?idsite=1&amp;rec=1" style="border:0" alt="" />
+    <!-- End Matomo -->
+  </noscript>
+  <div id="loading">
+    <div id="spinner"></div>
+  </div>
+  <div id="profile">
+    <div id="profile_img" style="background: url(https://avatars1.githubusercontent.com/u/5752328?v=4) center;"></div>
+    <div id="username"><span style="display:block;">Jeff Rescignano</span><a
+        href="https://github.com/JeffResc">@JeffResc</a></div>
+    <div id="userbio" style="display: block;">Full-Time Computer Science Student</div>
+    <div id="about">
+      <span style="display:block;"><i class="fas fa-map-marker-alt"></i> New York, United States</span>
+      <span style="display:block;"><a href="/links" target="_blank" style="text-decoration: none;"><i class="fas fa-link"></i> Social Links</a></span>
+    </div>
+  </div>
+  <div id="display">
+    <div id="work">
+      <!--h1>Featured Articles</h1>
+      <div class="projects" id="articles_section">
+        <%- articles_section %>
+      </div-->
+      <h1>Featured Tweaks for iOS</h1>
+      <div class="projects" id="tweaks_section">
+        <%- tweaks_section %>
+      </div>
+      <h1>ShortLook Providers for ShortLook on iOS</h1>
+      <div class="projects" id="shortlook_providers_section">
+        <%- shortlook_providers_section %>
+      </div>
+      <h1>Featured Widgets for iOS</h1>
+      <div class="projects" id="widgets_section">
+        <%- widgets_section %>
+      </div>
+      <h1>Projects on GitHub</h1>
+      <div class="projects" id="projects_section">
+        <%- projects_section %>
+      </div>
+    </div>
+    <div id="footer">
+      &copy;2020 <a href="//github.com/JeffResc">Jeff Rescignano</a><br>Photo by <a
+        href="https://www.pexels.com/@tomas-malik-793526?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
+        target="_blank">Tomáš Malík</a> from <a
+        href="https://www.pexels.com/photo/ocean-waves-crashing-on-rocks-3591558/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
+        target="_blank">Pexels</a><br>Website template created by <a href="https://github.com/imfunniee/gitfolio"
+        target="_blank">imfunniee/gitfolio</a> and modified by <a href="https://github.com/JeffResc/jeffresc.github.io"
+        target="_blank">custom deployment</a><br>Build Number <a href="https://github.com/JeffResc/jeffresc.github.io/actions"
+        target="_blank"><%= githubRunNumber %></a>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.15.0/lozad.min.js"></script>
+  <script type="text/javascript">
+    setTimeout(function () {
+      document.getElementById("loading").classList.add("animated");
+      document.getElementById("loading").classList.add("fadeOut");
+      setTimeout(function () {
+        document.getElementById("loading").classList.remove("animated");
+        document.getElementById("loading").classList.remove("fadeOut");
+        document.getElementById("loading").style.display = "none";
+      }, 800);
+    }, 1500);
+  </script>
+  <script type="text/javascript">
+    const observer = lozad();
+    observer.observe();
+    
+    /*const magicArticlesGrid = new MagicGrid({
+      container: "#articles_section",
+      animate: false,
+      gutter: 30, // default gutter size
+      static: true,
+      useMin: false,
+      maxColumns: 2,
+      useTransform: true
+    });*/
+    
+    const magicTweaksGrid = new MagicGrid({
+      container: "#tweaks_section",
+      animate: false,
+      gutter: 30, // default gutter size
+      static: true,
+      useMin: false,
+      maxColumns: 2,
+      useTransform: true
+    });
+
+    const magicShortLookProvidersGrid = new MagicGrid({
+      container: "#shortlook_providers_section",
+      animate: false,
+      gutter: 30, // default gutter size
+      static: true,
+      useMin: false,
+      maxColumns: 2,
+      useTransform: true
+    });
+
+    const magicWidgetsGrid = new MagicGrid({
+      container: "#widgets_section",
+      animate: false,
+      gutter: 30, // default gutter size
+      static: true,
+      useMin: false,
+      maxColumns: 2,
+      useTransform: true
+    });
+
+    const magicProjectsGrid = new MagicGrid({
+      container: "#projects_section",
+      animate: false,
+      gutter: 30, // default gutter size
+      static: true,
+      useMin: false,
+      maxColumns: 2,
+      useTransform: true
+    });
+
+    $("document").ready(() => {
+      //magicArticlesGrid.listen();
+      magicTweaksGrid.listen();
+      magicShortLookProvidersGrid.listen();
+      magicWidgetsGrid.listen();
+      magicProjectsGrid.listen();
+    });
+  </script>
+</body>
+
+</html>

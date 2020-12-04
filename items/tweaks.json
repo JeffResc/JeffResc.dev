@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "name": "SongShare",
+      "description": "Easily share songs with friends!<br>iOS 10 - 13",
+      "url": "https://repo.dynastic.co/package/dev.jeffresc.songshare",
+      "image": "dev.jeffresc.songshare.png"
+    },
+    {
+      "name": "Dynamik",
+      "description": "Easily set your iOS device's wallpaper(s) from custom sources on Reddit.<br>iOS 11 - 13",
+      "url": "https://repo.packix.com/package/com.jeffresc.dynamik/",
+      "image": "com.jeffresc.dynamik.png"
+    },
+    {
+      "name": "Meteoroid",
+      "description": "Automatically set your wallpaper from various NASA sources.<br>iOS 11 - 13",
+      "url": "https://repo.dynastic.co/package/com.jeffresc.meteoroid",
+      "image": "com.jeffresc.meteoroid.png"
+    }
+  ]
+}
