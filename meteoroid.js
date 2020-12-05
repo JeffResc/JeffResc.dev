@@ -7,11 +7,6 @@ const FlickrPhoto = require('flickr-photo-url')
 async function getIOTDData(cb) {
   const response = await got.stream('https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss');
 
-  if (response.statusCode != 200) {
-    console.error("Unable to fetch NASA IOTD data with error code " + response.statusCode);
-    process.exit(1);
-  }
-
   var feedparser = new FeedParser();
   response.pipe(feedparser);
 
@@ -39,11 +34,6 @@ async function getIOTDData(cb) {
 
 async function getEOData(cb) {
   const response = await got.stream('https://earthobservatory.nasa.gov/feeds/image-of-the-day.rss');
-
-  if (response.statusCode != 200) {
-    console.error("Unable to fetch NASA EO data with error code " + response.statusCode);
-    process.exit(1);
-  }
 
   var feedparser = new FeedParser();
   response.pipe(feedparser);
@@ -73,11 +63,6 @@ async function getEOData(cb) {
 async function getAPODData() {
   const response = await got.get('https://api.nasa.gov/planetary/apod?api_key=' + process.env['NASA_API_KEY']);
 
-  if (response.statusCode != 200) {
-    console.error("Unable to fetch NASA APOD data with error code " + response.statusCode);
-    process.exit(1);
-  }
-
   const response_object = JSON.parse(response.body);
   var obj = {};
 
@@ -96,11 +81,6 @@ async function getAPODData() {
 
 async function getFlickrData(id, username, cb) {
   const response = await got.stream('https://api.flickr.com/services/feeds/photos_public.gne?id=' + id + '&lang=en-us&format=rss_200');
-
-  if (response.statusCode != 200) {
-    console.error("Unable to fetch Flickr data for username " + username + " with error code " + response.statusCode);
-    process.exit(1);
-  }
 
   var feedparser = new FeedParser();
   response.pipe(feedparser);
