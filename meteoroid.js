@@ -61,7 +61,7 @@ async function getEOData(cb) {
 }
 
 async function getAPODData() {
-  const response = await got.get('https://api.nasa.gov/planetary/apod?api_key=' + process.env['NASA_API_KEY']);
+  const response = await got.get('https://api.nasa.gov/planetary/apod?api_key=' + process.env.NASA_API_KEY);
 
   const response_object = JSON.parse(response.body);
   var obj = {};
