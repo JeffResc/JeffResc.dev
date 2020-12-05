@@ -7,6 +7,11 @@ const FlickrPhoto = require('flickr-photo-url')
 async function getIOTDData(cb) {
   const response = await got.stream('https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss');
 
+  if (response.statusCode != 200) {
+    console.error("Unable to fetch NASA IOTD data with error code " + response.statusCode);
+    process.exit(1);
+  }
+
   var feedparser = new FeedParser();
   response.pipe(feedparser);
 
@@ -35,6 +40,11 @@ async function getIOTDData(cb) {
 async function getEOData(cb) {
   const response = await got.stream('https://earthobservatory.nasa.gov/feeds/image-of-the-day.rss');
 
+  if (response.statusCode != 200) {
+    console.error("Unable to fetch NASA EO data with error code " + response.statusCode);
+    process.exit(1);
+  }
+
   var feedparser = new FeedParser();
   response.pipe(feedparser);
 
@@ -62,6 +72,12 @@ async function getEOData(cb) {
 
 async function getAPODData() {
   const response = await got.get('https://api.nasa.gov/planetary/apod?api_key=' + process.env['NASA_API_KEY']);
+
+  if (response.statusCode != 200) {
+    console.error("Unable to fetch NASA APOD data with error code " + response.statusCode);
+    process.exit(1);
+  }
+
   const response_object = JSON.parse(response.body);
   var obj = {};
 
@@ -80,6 +96,11 @@ async function getAPODData() {
 
 async function getFlickrData(id, username, cb) {
   const response = await got.stream('https://api.flickr.com/services/feeds/photos_public.gne?id=' + id + '&lang=en-us&format=rss_200');
+
+  if (response.statusCode != 200) {
+    console.error("Unable to fetch Flickr data for username " + username + " with error code " + response.statusCode);
+    process.exit(1);
+  }
 
   var feedparser = new FeedParser();
   response.pipe(feedparser);
@@ -127,7 +148,7 @@ async function runMain() {
       flag: 'w'
     }, function (err) {
       if (err) throw err;
-      console.log('source1.json has been successfully written');
+      console.log('NASA (IOTD) (source1.json) has been successfully written');
     });
   });
 
@@ -137,7 +158,7 @@ async function runMain() {
       flag: 'w'
     }, function (err) {
       if (err) throw err;
-      console.log('source2.json has been successfully written');
+      console.log('NASA (EO) (source2.json) has been successfully written');
     });
   });
 
@@ -147,7 +168,7 @@ async function runMain() {
     flag: 'w'
   }, function (err) {
     if (err) throw err;
-    console.log('source3.json has been successfully written');
+    console.log('NASA (APOD) (source3.json) has been successfully written');
   });
 
   // Source 4 - SpaceX Flickr
@@ -156,7 +177,7 @@ async function runMain() {
       flag: 'w'
     }, function (err) {
       if (err) throw err;
-      console.log('source4.json has been successfully written');
+      console.log('SpaceX Flickr (source4.json) has been successfully written');
     });
   });
 
@@ -166,7 +187,7 @@ async function runMain() {
       flag: 'w'
     }, function (err) {
       if (err) throw err;
-      console.log('source5.json has been successfully written');
+      console.log('NASA HQ Flickr (source5.json) has been successfully written');
     });
   });
 
@@ -176,7 +197,7 @@ async function runMain() {
       flag: 'w'
     }, function (err) {
       if (err) throw err;
-      console.log('source6.json has been successfully written');
+      console.log('NASA JPL Flickr (source6.json) has been successfully written');
     });
   });
 
@@ -186,7 +207,7 @@ async function runMain() {
       flag: 'w'
     }, function (err) {
       if (err) throw err;
-      console.log('source7.json has been successfully written');
+      console.log('NASA Johnson Flickr (source7.json) has been successfully written');
     });
   });
 
@@ -196,7 +217,7 @@ async function runMain() {
       flag: 'w'
     }, function (err) {
       if (err) throw err;
-      console.log('source8.json has been successfully written');
+      console.log('NASA Kennedy Flickr (source8.json) has been successfully written');
     });
   });
 
@@ -206,7 +227,7 @@ async function runMain() {
       flag: 'w'
     }, function (err) {
       if (err) throw err;
-      console.log('source9.json has been successfully written');
+      console.log('NASA Goddard Flickr (source9.json) has been successfully written');
     });
   });
 
@@ -216,7 +237,7 @@ async function runMain() {
       flag: 'w'
     }, function (err) {
       if (err) throw err;
-      console.log('source10.json has been successfully written');
+      console.log('NASA Marshall Flickr (source10.json) has been successfully written');
     });
   });
 }
