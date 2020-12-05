@@ -131,9 +131,9 @@ function minifyCSS() {
 
 function fetch() {
     if (githubRunNumber == 0) {
-        fetch_offline()
+        fetch_offline();
     } else {
-        fetch_github()
+        fetch_github();
     }
 }
 
