@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/jeffresc
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jeffresc.dev
+  * I am jeffresc (https://keybase.io/jeffresc) on keybase.
+  * I have a public key ASBZcx_yljsSyO99Cgke_nOKqu_YpdsodQIA6D2m5YG6CQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012059731ff2963b12c8ef7d0a091efe738aaaefd8a5db28750200e83da6e581ba090a",
+      "host": "keybase.io",
+      "kid": "012059731ff2963b12c8ef7d0a091efe738aaaefd8a5db28750200e83da6e581ba090a",
+      "uid": "5fba56dfacde09cc9dc9abc736bf8919",
+      "username": "jeffresc"
+    },
+    "merkle_root": {
+      "ctime": 1611700723,
+      "hash": "cabc12c8d3ca18e2a7fe4e456abcff9ab75837fbede41d89bf67d860e0814cae71fffc0c93380d7197b44583b1fa22abc11b069f6f950933df1820a112557b66",
+      "hash_meta": "52469c9110051c4bbe94a63704e07b0b6cc0f91e68e45feb3d01c51b6c3039db",
+      "seqno": 18916437
+    },
+    "service": {
+      "entropy": "hqacUpKRKqZe8FxHAlq6D2Ks",
+      "hostname": "jeffresc.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.6.0"
+  },
+  "ctime": 1611700733,
+  "expire_in": 504576000,
+  "prev": "5f44416d930137a940bca99f19063e10acdc0f181de2cb6a8c7b80d7f3543c2b",
+  "seqno": 20,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgWXMf8pY7EsjvfQoJHv5ziqrv2KXbKHUCAOg9puWBugkKp3BheWxvYWTESpcCFMQgX0RBbZMBN6lAvKmfGQY+EKzcDxgd4stqjHuA1/NUPCvEIEfMpaqusoIuJxR1eT3DZ/SZD7BomEesm/vAIT3FrclSAgHCo3NpZ8RAszXB4hXlgb8L1KtGEi1PZMlsf6PkBND5ZdeztrZuec540OcQB5jzYE8J2PSfeEAo1FS+AFE0zNShirgWsoXhBqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIGeceoscvXfIosUYXZ673+4qNN0bIzKG4Ms4N4Qxt/jeo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jeffresc
+
+==================================================================
