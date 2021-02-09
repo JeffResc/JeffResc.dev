@@ -24,7 +24,7 @@ jobs:
         NASA_API_KEY: ${{ secrets.NASA_API_KEY }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@3.7.1
+      uses: JamesIves/github-pages-deploy-action@4.0.0
       with:
         GIT_CONFIG_NAME: Jeff Rescignano (Auto Deploy)
         GIT_CONFIG_EMAIL: jeff@jeffresc.dev
