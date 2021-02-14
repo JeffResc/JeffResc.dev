@@ -24,13 +24,13 @@ jobs:
         NASA_API_KEY: ${{ secrets.NASA_API_KEY }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@3.7.1
+      uses: JamesIves/github-pages-deploy-action@4.0.0
       with:
-        GIT_CONFIG_NAME: Jeff Rescignano (Auto Deploy)
-        GIT_CONFIG_EMAIL: jeff@jeffresc.dev
-        COMMIT_MESSAGE: Auto Deploy From GitHub Actions
-        SINGLE_COMMIT: true
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build
-        CLEAN: true
+        git-config-name: Jeff Rescignano (Auto Deploy)
+        git-config-email: jeff@jeffresc.dev
+        commit-message: Auto Deploy From GitHub Actions
+        single-commit: true
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
+        folder: build
+        clean: true
