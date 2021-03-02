@@ -19,14 +19,14 @@
       "description": "Display the time & date in an animation inspired by Watch Dogs.",
       "url": "https://repo.packix.com/package/com.jeffresc.lswatchdogs/",
       "bottom_icon": "dollar-sign",
-      "bottom_text": "$1.25 USD"
+      "bottom_text": "$1.00 USD"
     },
     {
       "name": "Particles Pack",
       "description": "A pack of 3 particle animations that work on both the homescreen and lockscreen.",
       "url": "https://repo.packix.com/package/com.jeffresc.homescreenparticlespack/",
       "bottom_icon": "dollar-sign",
-      "bottom_text": "$1.25 USD"
+      "bottom_text": "$1.00 USD"
     }
   ]
 }
