@@ -5,7 +5,7 @@
 	"main": "generate.js",
 	"author": "Jeff Rescignano",
 	"dependencies": {
-		"@octokit/rest": "^18.6.3",
+		"@octokit/rest": "^18.6.7",
 		"ejs": "^3.1.6",
 		"feedparser": "^2.2.10",
 		"flickr-photo-url": "^2.1.0",
