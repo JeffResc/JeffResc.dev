@@ -10,7 +10,7 @@
 		"feedparser": "^2.2.10",
 		"flickr-photo-url": "^2.1.0",
 		"got": "^11.8.2",
-		"minify": "^7.1.0",
+		"minify": "^7.2.1",
 		"ncp": "^2.0.0"
 	},
 	"scripts": {
