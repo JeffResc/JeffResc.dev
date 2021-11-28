@@ -166,7 +166,7 @@ body {
   font-size: 17px;
   line-height: 25px;
   word-spacing: 1.2px;
-  margin: 1vh 0px;
+  margin: 5vh 0px;
 }
 
 #blog p span {
@@ -554,13 +554,13 @@ body {
       rgba(10, 10, 10, 0.3),
       rgb(10, 10, 10, 1)
     ),
-    url("../img/ocean-waves-crashing-on-rocks-3591558.jpg");
+    url("img/ocean-waves-crashing-on-rocks-3591558.jpg");
   --background-background: linear-gradient(
       0deg,
       rgba(10, 10, 10, 1),
       rgba(10, 10, 10, 0.6)
     ),
-    url("../img/ocean-waves-crashing-on-rocks-3591558.jpg") center center fixed;
+    url("img/ocean-waves-crashing-on-rocks-3591558.jpg") center center fixed;
   --height: 50vh;
 }
 
@@ -591,7 +591,7 @@ body {
         rgba(10, 10, 10, 1),
         rgba(10, 10, 10, 0)
       ),
-      url("../img/ocean-waves-crashing-on-rocks-3591558.jpg") !important;
+      url("img/ocean-waves-crashing-on-rocks-3591558.jpg") !important;
   }
 }
 
