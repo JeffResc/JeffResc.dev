@@ -1,22 +1,18 @@
 {
-	"name": "jeffresc.github.io",
-	"version": "0.0.1",
-	"description": "A simple Node.js script to generate my website",
-	"main": "generate.js",
-	"author": "Jeff Rescignano",
-	"dependencies": {
-		"@octokit/rest": "^18.12.0",
-		"ejs": "^3.1.6",
-		"feedparser": "^2.2.10",
-		"flickr-photo-url": "^2.1.0",
-		"got": "^11.8.3",
-		"minify": "^7.1.0",
-		"ncp": "^2.0.0"
-	},
-	"scripts": {
-		"build_meteoroid": "node meteoroid.js",
-		"build_links": "node links.js",
-		"build_main": "node main.js",
-		"build": "node main.js && node links.js && node meteoroid.js"
-	}
+    "name": "jeffresc.github.io",
+    "version": "0.0.1",
+    "description": "A simple Node.js script to generate my website",
+    "main": "generate.js",
+    "author": "Jeff Rescignano",
+    "dependencies": {
+        "@octokit/rest": "^18.12.0",
+        "ejs": "^3.1.6",
+        "minify": "^7.1.0",
+        "ncp": "^2.0.0"
+    },
+    "scripts": {
+        "build_links": "node links.js",
+        "build_main": "node main.js",
+        "build": "node main.js && node links.js"
+    }
 }
