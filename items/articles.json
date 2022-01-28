@@ -1,9 +1,7 @@
 {
-  "items": [
-    {
-      "name": "Sonoff D1 Dimmer running ESPHome",
-      "description": "This guide will go over the basics of flashing your Sonoff D1 Dimmer with ESPHome and the essential code to get it up and running.",
-      "url": "/blog/2020-10-10"
-    }
-  ]
+    "items": [{
+        "name": "Sonoff D1 Dimmer running ESPHome",
+        "description": "This guide will go over the basics of flashing your Sonoff D1 Dimmer with ESPHome and the essential code to get it up and running.",
+        "url": "/blog/2020-10-10"
+    }]
 }
