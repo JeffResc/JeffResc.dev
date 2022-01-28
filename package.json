@@ -7,7 +7,7 @@
     "dependencies": {
         "@octokit/rest": "^18.12.0",
         "ejs": "^3.1.6",
-        "minify": "^7.1.0",
+        "minify": "^7.2.2",
         "ncp": "^2.0.0"
     },
     "scripts": {
