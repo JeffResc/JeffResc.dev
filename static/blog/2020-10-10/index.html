@@ -2,154 +2,134 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Sonoff D1 Dimmer running ESPHome | JeffResc</title>
-  <meta property="og:image" content="pexels-photo-401107.jpeg" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../../css/index.css">
-  <link rel="icon" href="https://avatars1.githubusercontent.com/u/5752328?v=4" type="image/png">
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/railscasts.min.css">
-  <!-- Matomo -->
-  <script type="text/javascript">
-    var _paq = window._paq || [];
-    _paq.push(['enableHeartBeatTimer']);
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function () {
-      var u = "https://analytics.jeffresc.dev/";
-      _paq.push(['setTrackerUrl', u + 'matomo.php']);
-      _paq.push(['setSiteId', '1']);
-      var d = document,
-        g = d.createElement('script'),
-        s = d.getElementsByTagName('script')[0];
-      g.type = 'text/javascript';
-      g.async = true;
-      g.defer = true;
-      g.src = u + 'matomo.js';
-      s.parentNode.insertBefore(g, s);
-    })();
-  </script>
-  <!-- End Matomo Code -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sonoff D1 Dimmer running ESPHome | JeffResc</title>
+    <meta property="og:image" content="pexels-photo-401107.jpeg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="icon" href="https://avatars1.githubusercontent.com/u/5752328?v=4" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/railscasts.min.css">
+    <!-- Matomo -->
+    <script type="text/javascript">
+        var _paq = window._paq || [];
+        _paq.push(['enableHeartBeatTimer']);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u = "https://analytics.jeffresc.dev/";
+            _paq.push(['setTrackerUrl', u + 'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d = document,
+                g = d.createElement('script'),
+                s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript';
+            g.async = true;
+            g.defer = true;
+            g.src = u + 'matomo.js';
+            s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <!-- End Matomo Code -->
 </head>
 
 <body>
-  <div id="loading">
-    <div id="spinner"></div>
-  </div>
-  <a href="../.." class="go_back"><i class="fas fa-arrow-left"></i></a>
-  <div id="background_overlay"></div>
-  <div id="background"
-    style="background: linear-gradient( 180deg, rgba(10, 10, 10, 0.3), rgb(10, 10, 10, 1) ),url(pexels-photo-401107.jpeg) center;">
-  </div>
-  <table id="profile_blog">
-    <tbody>
-      <tr>
-        <td style="width:8vw;">
-          <div id="profile_img_blog">
-            <div id="profile_img_blog"
-              style="background: rgba(0, 0, 0, 0) url(&quot;https://avatars1.githubusercontent.com/u/5752328?v=4&quot;) repeat scroll center center;">
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <a href="../.." class="go_back"><i class="fas fa-arrow-left"></i></a>
+    <div id="background_overlay"></div>
+    <div id="background" style="background: linear-gradient( 180deg, rgba(10, 10, 10, 0.3), rgb(10, 10, 10, 1) ),url(pexels-photo-401107.jpeg) center;">
+    </div>
+    <table id="profile_blog">
+        <tbody>
+            <tr>
+                <td style="width:8vw;">
+                    <div id="profile_img_blog">
+                        <div id="profile_img_blog" style="background: rgba(0, 0, 0, 0) url(&quot;https://avatars1.githubusercontent.com/u/5752328?v=4&quot;) repeat scroll center center;">
+                        </div>
+                    </div>
+                </td>
+                <td style="width:52vw;">
+                    <div id="username_blog"><span style="display:block;">Jeff Rescignano</span>@JeffResc<b id="blog_time"></b>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="blog-display">
+        <h1 id="blog_title">Sonoff D1 Dimmer running ESPHome</h1>
+        <h2 id="blog_sub_title">This guide will go over the basics of flashing your Sonoff D1 Dimmer with ESPHome and the essential code to get it up and running.</h2>
+        <div id="blog">
+            <div id="blog_warning" style="color: #000; background-color: #f1c40f; padding: 1em; border-radius: 10px;">
+                <h3><i class="fas fa-exclamation-triangle"></i> This guide is out-of-date</h3>
+                <p>While this code in guide may work for you, this code is now unmaintained and out-of-date. It is here for archival purposes only. There are <a href="https://github.com/JeffResc/Sonoff-D1-Dimmer/issues" target="_blank">known issues</a> with
+                    this project. Please see the full discussion (which includes alternatives) <a href="https://github.com/esphome/feature-requests/issues/611" target="_blank">here</a>.</p>
             </div>
-          </div>
-        </td>
-        <td style="width:52vw;">
-          <div id="username_blog"><span style="display:block;">Jeff Rescignano</span>@JeffResc<b id="blog_time"></b>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <div id="blog-display">
-    <h1 id="blog_title">Sonoff D1 Dimmer running ESPHome</h1>
-    <h2 id="blog_sub_title">This guide will go over the basics of flashing your Sonoff D1 Dimmer with ESPHome and the
-      essential code to get it up and running.</h2>
-    <div id="blog">
-      <h2>Table of Contents</h2>
-      <ul>
-        <li>
-          <h3><a href="#where-to-find-the-code" style="text-decoration: none; color: white;">Where To Find The Code</a>
-          </h3>
-        </li>
-        <li>
-          <h3><a href="#device-overview" style="text-decoration: none; color: white;">Device Overview</a></h3>
-        </li>
-        <li>
-          <h3><a href="#preparing-esphome" style="text-decoration: none; color: white;">Preparing ESPHome</a></h3>
-        </li>
-        <li>
-          <h3><a href="#soldering-for-433mhz-remote" style="text-decoration: none; color: white;">Optional: Soldering
+            <h2>Table of Contents</h2>
+            <ul>
+                <li>
+                    <h3><a href="#where-to-find-the-code" style="text-decoration: none; color: white;">Where To Find The Code</a>
+                    </h3>
+                </li>
+                <li>
+                    <h3><a href="#device-overview" style="text-decoration: none; color: white;">Device Overview</a></h3>
+                </li>
+                <li>
+                    <h3><a href="#preparing-esphome" style="text-decoration: none; color: white;">Preparing ESPHome</a></h3>
+                </li>
+                <li>
+                    <h3><a href="#soldering-for-433mhz-remote" style="text-decoration: none; color: white;">Optional: Soldering
               For 433MHz Remote</a></h3>
-        </li>
-        <li>
-          <h3><a href="#flashing-the-device" style="text-decoration: none; color: white;">Flashing the Device</a></h3>
-        </li>
-      </ul>
-      <h2 id="where-to-find-the-code">Where To Find The Code</h2>
-      <p>
-        All code for this project is available on my GitHub at <a target="_blank"
-          href="https://github.com/JeffResc/Sonoff-D1-Dimmer" style="color: white;">JeffResc/Sonoff-D1-Dimmer</a>.
-        Please be sure to use code from there to ensure you are using the most recent code as I may forget to update the
-        code listed below in this article.
-      </p>
-      </h2>
-      <h2 id="device-overview">Device Overview</h2>
-      <div style="padding: 10px; display:flex;">
-        <div style="padding: 10px; width: 50%;">
-          <p>
-            <img src="4_6_6.jpg" style="height: 25vw; width: auto;" /><br>
-            <small><a target="_blank" href="https://www.itead.cc/sonoff-d1-smart-dimmer-switch.html"
+                </li>
+                <li>
+                    <h3><a href="#flashing-the-device" style="text-decoration: none; color: white;">Flashing the Device</a></h3>
+                </li>
+            </ul>
+            <h2 id="where-to-find-the-code">Where To Find The Code</h2>
+            <p>
+                All code for this project is available on my GitHub at <a target="_blank" href="https://github.com/JeffResc/Sonoff-D1-Dimmer" style="color: white;">JeffResc/Sonoff-D1-Dimmer</a>. Please be sure to use code from there to ensure you are
+                using the most recent code as I may forget to update the code listed below in this article.
+            </p>
+            </h2>
+            <h2 id="device-overview">Device Overview</h2>
+            <div style="padding: 10px; display:flex;">
+                <div style="padding: 10px; width: 50%;">
+                    <p>
+                        <img src="4_6_6.jpg" style="height: 25vw; width: auto;" /><br>
+                        <small><a target="_blank" href="https://www.itead.cc/sonoff-d1-smart-dimmer-switch.html"
                 style="text-decoration: none; color: white;">Photos courtesy of ITEAD</a>.</small>
-          </p>
-        </div>
-        <div style="padding: 10px; flex-grow: 1;">
-          <p>
-            <img src="1_7_3.jpg" style="height: 25vw; width: auto;" />
-          </p>
-        </div>
-      </div>
-      <p>
-        The Sonoff D1 Dimmer, released in November 2019, is one of the newest additions to <a target="_blank"
-          href="https://tasmota.github.io/docs/Supported-Modules/" style="color: white;">Sonoff's lineup of
-          ESP8266-based smart home products</a>.
-        This smart dimmer switch is capable of remotely controlling the light brightness and on/off state over a Wi-Fi
-        connection or the onboard 433MHz remote receiver for <a target="_blank"
-          href="https://sonoff.tech/product/accessories/rm433" style="color: white;">Sonoff's RM433</a> that
-        optionally comes with the device.
-        You can view more information about this product on <a target="_blank"
-          href="https://www.itead.cc/sonoff-d1-smart-dimmer-switch.html" style="color: white;">its product page</a> or
-        <a target="_blank" href="https://fccid.io/2APN5D1" style="color: white;">its FCC ID page</a>.
-      </p>
-      <h2 id="preparing-esphome">Preparing ESPHome</h2>
-      <p>
-        To get started, you must have ESPHome installed and running and create a new device in the ESPHome
-        interface.
-        Although this is a fairly straight-forward process, it is outside the scope of this guide, but the ESPHome
-        website has a great guide on how to get started <a href="https://esphome.io/guides/getting_started_hassio.html"
-          style="color: white;">via Home Assistant</a> or <a
-          href="https://esphome.io/guides/getting_started_command_line.html" style="color: white;">the command
+                    </p>
+                </div>
+                <div style="padding: 10px; flex-grow: 1;">
+                    <p>
+                        <img src="1_7_3.jpg" style="height: 25vw; width: auto;" />
+                    </p>
+                </div>
+            </div>
+            <p>
+                The Sonoff D1 Dimmer, released in November 2019, is one of the newest additions to <a target="_blank" href="https://tasmota.github.io/docs/Supported-Modules/" style="color: white;">Sonoff's lineup of
+          ESP8266-based smart home products</a>. This smart dimmer switch is capable of remotely controlling the light brightness and on/off state over a Wi-Fi connection or the onboard 433MHz remote receiver for <a target="_blank" href="https://sonoff.tech/product/accessories/rm433"
+                    style="color: white;">Sonoff's RM433</a> that optionally comes with the device. You can view more information about this product on <a target="_blank" href="https://www.itead.cc/sonoff-d1-smart-dimmer-switch.html" style="color: white;">its product page</a>                or
+                <a target="_blank" href="https://fccid.io/2APN5D1" style="color: white;">its FCC ID page</a>.
+            </p>
+            <h2 id="preparing-esphome">Preparing ESPHome</h2>
+            <p>
+                To get started, you must have ESPHome installed and running and create a new device in the ESPHome interface. Although this is a fairly straight-forward process, it is outside the scope of this guide, but the ESPHome website has a great guide on how to
+                get started <a href="https://esphome.io/guides/getting_started_hassio.html" style="color: white;">via Home Assistant</a> or <a href="https://esphome.io/guides/getting_started_command_line.html" style="color: white;">the command
           line</a>.
-      </p>
-      <p>
-        For this integration, we will be utilizing a <a href="https://esphome.io/components/light/custom.html"
-          style="color: white;">custom light component</a> in ESPHome.
-        Just create a new device as you normally would basing it off of the <var>d1_dimmer_no_rf.yaml</var> code
-        found below.
-        This code works great if all you want to do is have control of the dimmer and you don't use the RF remote.
-        If you'd like to do more than just control the dimmer (i.e. use the RF remote), you can find all the available
-        subprojects on GitHub at <a target="_blank" href="https://github.com/JeffResc/Sonoff-D1-Dimmer"
-          style="color: white;">JeffResc/Sonoff-D1-Dimmer</a>.
-        In addition to that file, you will also need to include <var>d1_dimmer_no_rf.h</var>, which contains the C++
-        code for
-        the custom light component.
-      </p>
-      <p>
-        <var>d1_dimmer_no_rf.yaml</var>
-      <pre>
+            </p>
+            <p>
+                For this integration, we will be utilizing a <a href="https://esphome.io/components/light/custom.html" style="color: white;">custom light component</a> in ESPHome. Just create a new device as you normally would basing it off of the <var>d1_dimmer_no_rf.yaml</var>                code found below. This code works great if all you want to do is have control of the dimmer and you don't use the RF remote. If you'd like to do more than just control the dimmer (i.e. use the RF remote), you can find all the available
+                subprojects on GitHub at <a target="_blank" href="https://github.com/JeffResc/Sonoff-D1-Dimmer" style="color: white;">JeffResc/Sonoff-D1-Dimmer</a>. In addition to that file, you will also need to include <var>d1_dimmer_no_rf.h</var>,
+                which contains the C++ code for the custom light component.
+            </p>
+            <p>
+                <var>d1_dimmer_no_rf.yaml</var>
+                <pre>
       <code class="yaml">
 # Set variables such as the device's name and friendly name
 # The devicename is used internally which the friendly name is shown in the user interface
@@ -236,10 +216,10 @@ light:
         gamma_correct: 0        
       </code>
       </pre>
-      </p>
-      <p>
-        <var>d1_dimmer_no_rf.h</var>
-      <pre>
+            </p>
+            <p>
+                <var>d1_dimmer_no_rf.h</var>
+                <pre>
         <code class="arduino">
 /*
   d1_dimmer_no_rf.h - Sonoff D1 Dimmer support for ESPHome
@@ -337,124 +317,92 @@ public:
 };
         </code>
         </pre>
-      </p>
-      <h2 id="soldering-for-433mhz-remote">Optional: Soldering For 433MHz Remote</h2>
-      <p>
-        Out of the box, the Sonoff D1 Dimmer's RF features are controlled by another chip found on the board, the <a
-          target="_blank" href="https://www.synoxo.com/syne/product.php?flm=6&lm=9&zlm=12" style="color: white;">Synoxo
-          590R ASK</a>,
-        but GitHub user, <a target="_blank" href="https://github.com/craigueh" style="color: white;">@craigueh</a>,
-        found that <a href="https://github.com/esphome/feature-requests/issues/611#issuecomment-706593584"
-          style="color: white;">"the delay going through the other chip unbearable"</a>,
-        so it is a better approach to directly solder the RF receiver directly to the ESP8266 and have all control take
-        place there.
-        All credit for this method goes to <a href="https://github.com/craigueh" style="color: white;">@craigueh</a>, as
-        they were the one to <a target="_blank"
-          href="https://github.com/esphome/feature-requests/issues/611#issuecomment-691723990"
-          style="color: white;">post the steps on GitHub</a>.
-      </p>
-      <p>
-        To do this, you must solder the top right corner pin on the 590R RF chip to solder pad 4 on the
-        ESP8285.
-      </p>
-      <p>
-        Then, be sure to use <var>d1_dimmer_rf_soldered.yaml</var> and <var>d1_dimmer_rf_soldered.h</var> from <a
-          target="_blank" href="https://github.com/JeffResc/Sonoff-D1-Dimmer/blob/main/d1_dimmer_rf_soldered"
-          style="color: white;">JeffResc/Sonoff-D1-Dimmer/d1_dimmer_rf_soldered</a> on GitHub.
-      </p>
-      <p>
-        If you would like to use RF, but are not interested in soldering, you can try
-        <var>d1_dimmer_rf.yaml</var> and <var>d1_dimmer_rf.h</var> from <a target="_blank"
-          href="https://github.com/JeffResc/Sonoff-D1-Dimmer/blob/main/d1_dimmer_rf"
-          style="color: white;">JeffResc/Sonoff-D1-Dimmer/d1_dimmer_rf</a> on GitHub.
-      </p>
-      <img src="73125985-700cca80-3fad-11ea-813c-390c0b996655-2.jpg" style="height: 20vw; width: auto;" /><br>
-      <small>Image of connection from 590R RF to ESP8285. <a target="_blank"
+            </p>
+            <h2 id="soldering-for-433mhz-remote">Optional: Soldering For 433MHz Remote</h2>
+            <p>
+                Out of the box, the Sonoff D1 Dimmer's RF features are controlled by another chip found on the board, the <a target="_blank" href="https://www.synoxo.com/syne/product.php?flm=6&lm=9&zlm=12" style="color: white;">Synoxo
+          590R ASK</a>, but GitHub user, <a target="_blank" href="https://github.com/craigueh" style="color: white;">@craigueh</a>, found that <a href="https://github.com/esphome/feature-requests/issues/611#issuecomment-706593584" style="color: white;">"the delay going through the other chip unbearable"</a>,
+                so it is a better approach to directly solder the RF receiver directly to the ESP8266 and have all control take place there. All credit for this method goes to <a href="https://github.com/craigueh" style="color: white;">@craigueh</a>,
+                as they were the one to <a target="_blank" href="https://github.com/esphome/feature-requests/issues/611#issuecomment-691723990" style="color: white;">post the steps on GitHub</a>.
+            </p>
+            <p>
+                To do this, you must solder the top right corner pin on the 590R RF chip to solder pad 4 on the ESP8285.
+            </p>
+            <p>
+                Then, be sure to use <var>d1_dimmer_rf_soldered.yaml</var> and <var>d1_dimmer_rf_soldered.h</var> from <a target="_blank" href="https://github.com/JeffResc/Sonoff-D1-Dimmer/blob/main/d1_dimmer_rf_soldered" style="color: white;">JeffResc/Sonoff-D1-Dimmer/d1_dimmer_rf_soldered</a>                on GitHub.
+            </p>
+            <p>
+                If you would like to use RF, but are not interested in soldering, you can try
+                <var>d1_dimmer_rf.yaml</var> and <var>d1_dimmer_rf.h</var> from <a target="_blank" href="https://github.com/JeffResc/Sonoff-D1-Dimmer/blob/main/d1_dimmer_rf" style="color: white;">JeffResc/Sonoff-D1-Dimmer/d1_dimmer_rf</a> on GitHub.
+            </p>
+            <img src="73125985-700cca80-3fad-11ea-813c-390c0b996655-2.jpg" style="height: 20vw; width: auto;" /><br>
+            <small>Image of connection from 590R RF to ESP8285. <a target="_blank"
           href="https://github.com/arendst/Tasmota/issues/7598#issuecomment-578433417"
           style="text-decoration: none; color: white;">Photo courtesy of klotzma</a>.</small>
-      </p>
-      <h2 id="flashing-the-device">Flashing the Device</h2>
-      <p>
-        To flash the ESP8285 found onboard, first compile the binary in the ESPHome UI.
-        If you are unsure how to compile the binary, you can find instructions on the <a
-          href="https://esphome.io/guides/migrate_sonoff_tasmota.html#getting-the-binary" style="color: white;">ESPHome
+            </p>
+            <h2 id="flashing-the-device">Flashing the Device</h2>
+            <p>
+                To flash the ESP8285 found onboard, first compile the binary in the ESPHome UI. If you are unsure how to compile the binary, you can find instructions on the <a href="https://esphome.io/guides/migrate_sonoff_tasmota.html#getting-the-binary"
+                    style="color: white;">ESPHome
           website</a>.
-      </p>
-      <p>
-        Then connect your flashing tool such as this <a
-          href="https://www.amazon.com/DSD-TECH-Adapter-FT232RL-Compatible/dp/B07BBPX8B8" style="color: white;">FTDI USB
-          to Serial Device on Amazon</a> or even another ESP8266 <a
-          href="https://ansonvandoren.com/posts/nodemcu-as-ftdi-bridge/" style="color: white;">as described in this
-          tutorial.</a> Ensure that your 3V3 pin is only connected to a 3V3 source. Using another voltage such as 5V
-        could damage your device.
-      </p>
-      <p>
-        I found this device very easy to flash after figuring out the correct pin locations on the board.
-        I've marked the correct locations on the board to flash the ESP8285, which include access to the 3V3,
-        GND, TX, RX, and GPIO0 pins.
-        To help with the flash, I found it handy to use <a href="https://www.adafruit.com/product/3009"
-          style="color: white;">short break-away male header pins</a> to line-up
-        the cables with the corresponding holes on the board.
-      </p>
-      <p>
-        First, connect GPIO0 on the board to GND. You want to ensure this is grounded before powering the device as this
-        will boot the onboard ESP8285 in flashing mode.
-        Then, either connect your wires directly to the board by soldering, holding them in place, or using the header
-        pin trick as descibed above in order to connect your flashing
-        device to GND, TX, RX, and 3V3 as marked below. GitHub user, <a target="_blank"
-          href="https://github.com/cpankonien" style="color: white;">@cpankonien</a>, <a target="_blank"
-          href="https://github.com/arendst/Tasmota/issues/7598#issuecomment-685009348" style="color: white;">provides a
-          great resource on how to do this</a>.
-        You should then be able to flash the device using a tool such as <a target="_blank"
-          href="https://github.com/esphome/ESPHome-Flasher" style="color: white;">ESPHome Flasher</a> or <a
-          target="_blank" href="https://github.com/espressif/esptool" style="color: white;">esptool.py</a>.
-      </p>
-      <div style="padding: 10px; display:flex;">
-        <div style="padding: 10px; width: 50%;">
-          <p>
-            <img src="73125985-700cca80-3fad-11ea-813c-390c0b996655.jpg" style="height: 20vw; width: auto;" /><br>
-            <small>Image of GPIO 0. <a target="_blank"
+            </p>
+            <p>
+                Then connect your flashing tool such as this <a href="https://www.amazon.com/DSD-TECH-Adapter-FT232RL-Compatible/dp/B07BBPX8B8" style="color: white;">FTDI USB
+          to Serial Device on Amazon</a> or even another ESP8266 <a href="https://ansonvandoren.com/posts/nodemcu-as-ftdi-bridge/" style="color: white;">as described in this
+          tutorial.</a> Ensure that your 3V3 pin is only connected to a 3V3 source. Using another voltage such as 5V could damage your device.
+            </p>
+            <p>
+                I found this device very easy to flash after figuring out the correct pin locations on the board. I've marked the correct locations on the board to flash the ESP8285, which include access to the 3V3, GND, TX, RX, and GPIO0 pins. To help with the flash,
+                I found it handy to use <a href="https://www.adafruit.com/product/3009" style="color: white;">short break-away male header pins</a> to line-up the cables with the corresponding holes on the board.
+            </p>
+            <p>
+                First, connect GPIO0 on the board to GND. You want to ensure this is grounded before powering the device as this will boot the onboard ESP8285 in flashing mode. Then, either connect your wires directly to the board by soldering, holding them in place,
+                or using the header pin trick as descibed above in order to connect your flashing device to GND, TX, RX, and 3V3 as marked below. GitHub user, <a target="_blank" href="https://github.com/cpankonien" style="color: white;">@cpankonien</a>,
+                <a target="_blank" href="https://github.com/arendst/Tasmota/issues/7598#issuecomment-685009348" style="color: white;">provides a
+          great resource on how to do this</a>. You should then be able to flash the device using a tool such as <a target="_blank" href="https://github.com/esphome/ESPHome-Flasher" style="color: white;">ESPHome Flasher</a> or <a target="_blank"
+                    href="https://github.com/espressif/esptool" style="color: white;">esptool.py</a>.
+            </p>
+            <div style="padding: 10px; display:flex;">
+                <div style="padding: 10px; width: 50%;">
+                    <p>
+                        <img src="73125985-700cca80-3fad-11ea-813c-390c0b996655.jpg" style="height: 20vw; width: auto;" /><br>
+                        <small>Image of GPIO 0. <a target="_blank"
                 href="https://github.com/arendst/Tasmota/issues/7598#issuecomment-578433417"
                 style="text-decoration: none; color: white;">Photo courtesy of klotzma</a>.</small>
-          </p>
-        </div>
-        <div style="padding: 10px; flex-grow: 1;">
-          <p>
-            <img src="73125991-887ce500-3fad-11ea-97dd-39ca893e0eed.jpg" style="height: 20vw; width: auto;" /><br>
-            <small>Image of GND, TX, TX and 3V3. <a target="_blank"
+                    </p>
+                </div>
+                <div style="padding: 10px; flex-grow: 1;">
+                    <p>
+                        <img src="73125991-887ce500-3fad-11ea-97dd-39ca893e0eed.jpg" style="height: 20vw; width: auto;" /><br>
+                        <small>Image of GND, TX, TX and 3V3. <a target="_blank"
                 href="https://github.com/arendst/Tasmota/issues/7598#issuecomment-578433417"
                 style="text-decoration: none; color: white;">Photo courtesy of klotzma</a>.</small>
-          </p>
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <div id="footer_blog">
-    &copy;2020 <a href="//github.com/JeffResc">Jeff Rescignano</a>
-    <br>Photo by <a
-      href="https://www.pexels.com/@lusaya?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
-      target="_blank">Saya Kimura</a> from <a
-      href="https://www.pexels.com/photo/bright-clear-close-up-dark-401107/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
-      target="_blank">Pexels</a><br>Website template created by <a href="https://github.com/imfunniee/gitfolio"
-      target="_blank">imfunniee/gitfolio</a> and modified by <a
-      href="https://github.com/JeffResc/jeffresc.github.io" target="_blank">custom deployment</a>
-  </div>
-  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
-  <script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-    setTimeout(function () {
-      document.getElementById("loading").classList.add("animated");
-      document.getElementById("loading").classList.add("fadeOut");
-      setTimeout(function () {
-        document.getElementById("loading").classList.remove("animated");
-        document.getElementById("loading").classList.remove("fadeOut");
-        document.getElementById("loading").style.display = "none";
-      }, 800);
-    }, 1500);
+    <div id="footer_blog">
+        &copy;2020 <a href="//github.com/JeffResc">Jeff Rescignano</a>
+        <br>Photo by <a href="https://www.pexels.com/@lusaya?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">Saya Kimura</a> from <a href="https://www.pexels.com/photo/bright-clear-close-up-dark-401107/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
+            target="_blank">Pexels</a><br>Website template created by <a href="https://github.com/imfunniee/gitfolio" target="_blank">imfunniee/gitfolio</a> and modified by <a href="https://github.com/JeffResc/jeffresc.github.io" target="_blank">custom deployment</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
+    <script type="text/javascript">
+        hljs.initHighlightingOnLoad();
+        setTimeout(function() {
+            document.getElementById("loading").classList.add("animated");
+            document.getElementById("loading").classList.add("fadeOut");
+            setTimeout(function() {
+                document.getElementById("loading").classList.remove("animated");
+                document.getElementById("loading").classList.remove("fadeOut");
+                document.getElementById("loading").style.display = "none";
+            }, 800);
+        }, 1500);
 
-    document.querySelector("#background_overlay").style.background =
-      "linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.1))";
-  </script>
+        document.querySelector("#background_overlay").style.background =
+            "linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.1))";
+    </script>
 
 
 </body>
