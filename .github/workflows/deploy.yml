@@ -23,10 +23,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Download Latest GitHub Profile ⬇️
-      uses: wei/curl@master
-      with:
-        args: >
-          -H 'Authorization: token ${{ secrets.GITHUB_TOKEN }}' https://api.github.com/users/JeffResc/repos --create-dirs --output $GITHUB_WORKSPACE/content/github_projects.json
+      run: >
+        curl -H 'Authorization: token ${{ secrets.GITHUB_TOKEN }}' https://api.github.com/users/JeffResc/repos --create-dirs --output $GITHUB_WORKSPACE/content/github_projects.json
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4.2.2
       with:

@@ -15,8 +15,6 @@ jobs:
     - name: Download Latest GitHub Profile ⬇️
       run: >
         curl -H 'Authorization: token ${{ secrets.GITHUB_TOKEN }}' https://api.github.com/users/JeffResc/repos --create-dirs --output $GITHUB_WORKSPACE/content/github_projects.json
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
     - name: Install Dependencies & Build Project 🔧
       run: |
         npm install
