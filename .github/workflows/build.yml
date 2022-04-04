@@ -15,7 +15,8 @@ jobs:
     - name: Download Latest GitHub Profile ⬇️
       uses: wei/curl@master
       with:
-        args: -H 'Authorization: token ${{ secrets.GITHUB_TOKEN }}' https://api.github.com/users/JeffResc/repos
+        args: >
+          -H 'Authorization: token ${{ secrets.GITHUB_TOKEN }}' https://api.github.com/users/JeffResc/repos
     - name: Install Dependencies & Build Project 🔧
       run: |
         npm install
