@@ -20,7 +20,9 @@ const ProjectCard = (props) => {
           <span className="text-xs tracking-wide uppercase flex"><GoStar className="mt-0.5" /> {props.stars} stars, <GoRepoForked className="mt-0.5" /> {props.forks} forks, <GoCode className="mt-0.5" /> {props.language}</span>
           {props.description}
         </p>
-        <button type="button" onClick={(e) => {e.preventDefault();window.open(props.url, '_blank');}} className="absolute bottom-6 left-6 inline-block px-6 py-2.5 bg-slate-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-900 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Explore</button>
+        <a href={props.url} target="_blank" rel="noopener noreferrer">
+          <button type="button" className="absolute bottom-6 left-6 inline-block px-6 py-2.5 bg-slate-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-900 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Explore</button>
+        </a>
       </div>
     </div>
   );

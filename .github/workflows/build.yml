@@ -12,10 +12,9 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 14.x
-    - name: Download Latest GitHub Profile ⬇️
-      run: >
-        curl -H 'Authorization: token ${{ secrets.GITHUB_TOKEN }}' https://api.github.com/users/JeffResc/repos --create-dirs --output $GITHUB_WORKSPACE/content/github_projects.json
     - name: Install Dependencies & Build Project 🔧
       run: |
         npm install
         npm run build
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

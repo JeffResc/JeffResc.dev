@@ -1,6 +1,7 @@
 import * as React from "react"
 
 import { StaticImage } from "gatsby-plugin-image"
+import { graphql } from 'gatsby'
 
 import Layout from "../templates/Layout"
 import Hero from "../components/Hero"
@@ -8,12 +9,13 @@ import TinyHero from "../components/TinyHero"
 import IconsDisplay from "../components/IconsDisplay"
 import ProjectCard from "../components/ProjectCard"
 
-import GitHubProjects from "../../content/github_projects.json";
-const TopGitHubProjects = GitHubProjects.filter(obj => {
-  return obj.private === false && obj.fork === false;
-}).sort((a, b) => { return b.stargazers_count - a.stargazers_count }).slice(0,6);
+// import GitHubProjects from "../../content/github_projects.json";
+// const TopGitHubProjects = GitHubProjects.filter(obj => {
+//   return obj.private === false && obj.fork === false;
+// }).sort((a, b) => { return b.stargazers_count - a.stargazers_count }).slice(0,6);
 
-export default function IndexPage() {
+export default function IndexPage({ data }) {
+  console.log(data.allInternalRepos);
   return (
     <Layout pageTitle="Jeff Rescignano">
       <Hero />
@@ -45,19 +47,41 @@ export default function IndexPage() {
         </IconsDisplay>
       <TinyHero title="Top GitHub Projects" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {TopGitHubProjects.map((project) => (
+        {data.allInternalRepos.edges.map((project) => (
             <ProjectCard
-              name={project.name}
-              description={project.description}
-              url={project.html_url}
-              stars={project.stargazers_count}
-              forks={project.forks}
-              archived={project.archived}
-              language={project.language}
-              key={project.full_name}
+              name={project.node.name}
+              description={project.node.description}
+              url={project.node.html_url}
+              stars={project.node.stargazers_count}
+              forks={project.node.forks}
+              archived={project.node.archived}
+              language={project.node.language}
+              key={project.node.full_name}
             />
           ))}
       </div>
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    allInternalRepos(
+      filter: {id: {ne: "dummy"}, private: {eq: false}, fork: {eq: false}},
+      sort: {order: DESC, fields: stargazers_count}
+      limit: 6
+    ) {
+      edges {
+        node {
+          id
+          forks
+          description
+          name
+          stargazers_count
+          language
+          html_url
+        }
+      }
+    }
+  }
+`
