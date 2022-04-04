@@ -1,7 +1,6 @@
 import * as React from "react"
 
 import { graphql } from 'gatsby'
-import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../../templates/Layout"
 import TinyHero from "../../components/TinyHero"
@@ -14,31 +13,31 @@ export default function Projects({ data }) {
     <Layout pageTitle="Projects">
       <TinyHero title="Featured Projects" />
       <BlogList>
+      {data.projects.edges.map((project) => (
         <BlogListItem
-            index="0"
-            title="Test"
-            top_text="Hello"
-            description="Hi hi hi"
-            url={`/blog/1`}
-            featuredImage={
-              <StaticImage src="../images/hero_profile.jpg" alt="Hi" placeholder="blurred" className="h-80 bg-slate-700 aspect-video" />
-            }
-            key="0"
+          index={project.node.id}
+          title={project.node.frontmatter.title}
+          top_text="Hurmmm"
+          description={project.node.frontmatter.description}
+          url={`/projects/${project.node.slug}`}
+          featuredImage={project.node.frontmatter.featuredImage}
+          key={project.node.id}
         />
+      ))}
       </BlogList>
       <TinyHero title="Academic Projects" />
       <TinyHero title="All GitHub Projects" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-        {data.allInternalRepos.edges.map((project) => (
+        {data.repos.edges.map((repo) => (
             <ProjectCard
-              name={project.node.name}
-              description={project.node.description}
-              url={project.node.html_url}
-              stars={project.node.stargazers_count}
-              forks={project.node.forks}
-              archived={project.node.archived}
-              language={project.node.language}
-              key={project.node.id}
+              name={repo.node.name}
+              description={repo.node.description}
+              url={repo.node.html_url}
+              stars={repo.node.stargazers_count}
+              forks={repo.node.forks}
+              archived={repo.node.archived}
+              language={repo.node.language}
+              key={repo.node.id}
             />
           ))}
       </div>
@@ -48,7 +47,7 @@ export default function Projects({ data }) {
 
 export const query = graphql`
   query {
-    allInternalRepos(
+    repos: allInternalRepos(
       filter: {id: {ne: "dummy"}, private: {eq: false}, fork: {eq: false}},
       sort: {order: DESC, fields: stargazers_count}
     ) {
@@ -61,6 +60,30 @@ export const query = graphql`
           stargazers_count
           language
           html_url
+        }
+      }
+    }
+    projects: allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {fields: {source: {eq: "projects"}}}
+    ) {
+      edges {
+        node {
+          id
+          slug
+          frontmatter {
+            title
+            description
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData (
+                  width: 1080
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
+            }
+          }
         }
       }
     }

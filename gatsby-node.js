@@ -8,18 +8,19 @@ exports.createPages = async({ graphql, actions }) => {
     const blogIndex = path.resolve(`./src/templates/blog-index.js`)
     const result = await graphql(
         `
-            {
-                allMdx(
-                    sort: { fields: [frontmatter___date], order: DESC }
-                ) {
-                    edges {
-                        node {
-                            id
-                            slug
-                        }
+        {
+            allMdx(
+                sort: {fields: [frontmatter___date], order: DESC}
+                filter: {fields: {source: {eq: "blog"}}}
+            ) {
+                edges {
+                    node {
+                        id
+                        slug
                     }
                 }
             }
+        }          
         `
     )
     paginate({
