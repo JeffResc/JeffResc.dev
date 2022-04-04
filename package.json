@@ -23,6 +23,7 @@
         "gatsby-plugin-image": "^2.11.1",
         "gatsby-plugin-matomo": "^0.11.1",
         "gatsby-plugin-mdx": "^3.11.1",
+        "gatsby-plugin-mdx-source-name": "^1.0.1",
         "gatsby-plugin-meta-redirect": "^1.1.1",
         "gatsby-plugin-react-helmet": "^5.11.0",
         "gatsby-plugin-sharp": "^4.11.1",

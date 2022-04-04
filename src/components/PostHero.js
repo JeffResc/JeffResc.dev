@@ -2,7 +2,7 @@ import React from "react";
 
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const BlogHero = (props) => {
+const PostHero = (props) => {
   const featuredImage = getImage(props.featuredImage)
   return (
     <section>
@@ -17,4 +17,4 @@ const BlogHero = (props) => {
   );
 };
 
-export default BlogHero;
+export default PostHero;

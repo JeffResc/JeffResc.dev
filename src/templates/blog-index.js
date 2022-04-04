@@ -2,7 +2,7 @@ import * as React from "react"
 
 import { graphql } from 'gatsby'
 
-import Layout from "./Layout"
+import Layout from "../templates/Layout"
 import TinyHero from "../components/TinyHero"
 import BlogList from "../components/BlogList"
 import BlogListItem from "../components/BlogListItem"
@@ -42,6 +42,7 @@ export const query = graphql`
             sort: { fields: [frontmatter___date], order: DESC }
             skip: $skip
             limit: $limit
+            filter: {fields: {source: {eq: "blog"}}}
         ) {
             edges {
                 node {

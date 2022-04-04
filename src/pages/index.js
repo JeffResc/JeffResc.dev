@@ -29,23 +29,23 @@ export default function IndexPage({ data }) {
       </IconsDisplay>
       <TinyHero title="Tools" />
       <IconsDisplay>
-        <StaticImage src="../images/icons/Moby-logo.webp" alt="Docker" placeholder="blurred" height={64} key="9" />
-        <StaticImage src="../images/icons/linux-tux.svg" alt="Linux" placeholder="blurred" height={64} key="10" />
-        <StaticImage src="../images/icons/raspberry-pi.svg" alt="Raspberry Pi" placeholder="blurred" height={64} key="11" />
-        <StaticImage src="../images/icons/ubuntu-4.svg" alt="Ubuntu" placeholder="blurred" height={64} key="12" />
-        <StaticImage src="../images/icons/github-icon.svg" alt="GitHub" placeholder="blurred" height={64} key="17" />
-        <StaticImage src="../images/icons/git-icon.svg" alt="Git" placeholder="blurred" height={64} key="18" />
+        <StaticImage src="../images/icons/Moby-logo.webp" alt="Docker" placeholder="blurred" height={64} key="7" />
+        <StaticImage src="../images/icons/linux-tux.svg" alt="Linux" placeholder="blurred" height={64} key="8" />
+        <StaticImage src="../images/icons/raspberry-pi.svg" alt="Raspberry Pi" placeholder="blurred" height={64} key="9" />
+        <StaticImage src="../images/icons/ubuntu-4.svg" alt="Ubuntu" placeholder="blurred" height={64} key="10" />
+        <StaticImage src="../images/icons/github-icon.svg" alt="GitHub" placeholder="blurred" height={64} key="11" />
+        <StaticImage src="../images/icons/git-icon.svg" alt="Git" placeholder="blurred" height={64} key="12" />
         <StaticImage src="../images/icons/react-2.svg" alt="React" placeholder="blurred" height={64} key="13" />
         <StaticImage src="../images/icons/gatsby.svg" alt="Gatsby" placeholder="blurred" height={64} key="14" />
-        <StaticImage src="../images/icons/tailwindcss-icon.svg" alt="Tailwind CSS" placeholder="blurred" height={64} key="24" />
-        <StaticImage src="../images/icons/arduino-1.svg" alt="Arduino" placeholder="blurred" height={64} key="15" />
-        <StaticImage src="../images/icons/npm-square-red-1.svg" alt="NPM" placeholder="blurred" height={64} key="16" />
-        <StaticImage src="../images/icons/visual-studio-code-1.svg" alt="Visual Studio Code" placeholder="blurred" height={64} key="19" />
-        <StaticImage src="../images/icons/travis-ci-icon.svg" alt="Travis CI" placeholder="blurred" height={64} key="20" />
-        <StaticImage src="../images/icons/mysql-6.svg" alt="MySQL" placeholder="blurred" height={64} key="21" />
-        <StaticImage src="../images/icons/mongodb-icon-1.svg" alt="MongoDB" placeholder="blurred" height={64} key="22" />
-        <StaticImage src="../images/icons/latex.png" alt="LaTeX" placeholder="blurred" height={64} key="23" />
-        </IconsDisplay>
+        <StaticImage src="../images/icons/tailwindcss-icon.svg" alt="Tailwind CSS" placeholder="blurred" height={64} key="15" />
+        <StaticImage src="../images/icons/arduino-1.svg" alt="Arduino" placeholder="blurred" height={64} key="16" />
+        <StaticImage src="../images/icons/npm-square-red-1.svg" alt="NPM" placeholder="blurred" height={64} key="17" />
+        <StaticImage src="../images/icons/visual-studio-code-1.svg" alt="Visual Studio Code" placeholder="blurred" height={64} key="18" />
+        <StaticImage src="../images/icons/travis-ci-icon.svg" alt="Travis CI" placeholder="blurred" height={64} key="19" />
+        <StaticImage src="../images/icons/mysql-6.svg" alt="MySQL" placeholder="blurred" height={64} key="20" />
+        <StaticImage src="../images/icons/mongodb-icon-1.svg" alt="MongoDB" placeholder="blurred" height={64} key="21" />
+        <StaticImage src="../images/icons/latex.png" alt="LaTeX" placeholder="blurred" height={64} key="22" />
+      </IconsDisplay>
       <TinyHero title="Top GitHub Projects" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {data.allInternalRepos.edges.map((project) => (

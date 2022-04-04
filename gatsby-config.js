@@ -102,6 +102,7 @@ module.exports = {
                 ],
             },
         },
+        `gatsby-plugin-mdx-source-name`,
         {
             resolve: 'gatsby-source-filesystem',
             options: {
@@ -109,6 +110,14 @@ module.exports = {
                 path: `${__dirname}/blog`,
             },
             __key: 'blog'
+        },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: `projects`,
+                path: `${__dirname}/projects`,
+            },
+            __key: 'projects'
         },
         {
             resolve: 'gatsby-plugin-matomo',
@@ -121,34 +130,17 @@ module.exports = {
         {
             resolve: "gatsby-source-apiserver",
             options: {
-                // Type prefix of entities from server
                 typePrefix: "internal__",
-
-                // The url, this should be the endpoint you are attempting to pull data from
                 url: `https://api.github.com/users/JeffResc/repos`,
-
                 method: "get",
-
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": "token " + process.env.GITHUB_TOKEN
                 },
-
-                // Name of the data to be downloaded.  Will show in graphQL or be saved to a file
-                // using this name. i.e. posts.json
                 name: `repos`,
-
-                // enable disk caching
                 allowCache: true,
-                // if allowCache is true, then the cache will be purged after the
-                // specified amount of time
                 maxCacheDurationSeconds: 60 * 60 * 24,
-
-
-                // Optionally include some output when building
-                // Default is false
-                verboseOutput: true, // For debugging purposes
-
+                verboseOutput: false,
             }
         },
         'gatsby-plugin-meta-redirect'
