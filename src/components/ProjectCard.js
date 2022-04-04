@@ -13,7 +13,7 @@ function ifArchivedIcon(props) {
 
 const ProjectCard = (props) => {
   return (
-    <div className="flex justify-center hover:scale-110 duration-200">
+    <div className="flex justify-center hover:scale-110 hover:z-50 duration-200">
       <div className="block p-6 rounded-lg shadow-lg max-w-sm bg-gradient-to-r from-cyan-800 to-indigo-900 w-full h-full relative">
         <span className="text-white text-xl leading-tight font-medium mb-2 flex">{props.name} {ifArchivedIcon(props)}</span>
         <p className="text-white text-base mb-12">

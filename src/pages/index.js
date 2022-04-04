@@ -15,7 +15,6 @@ import ProjectCard from "../components/ProjectCard"
 // }).sort((a, b) => { return b.stargazers_count - a.stargazers_count }).slice(0,6);
 
 export default function IndexPage({ data }) {
-  console.log(data.allInternalRepos);
   return (
     <Layout pageTitle="Jeff Rescignano">
       <Hero />
@@ -27,8 +26,6 @@ export default function IndexPage({ data }) {
         <StaticImage src="../images/icons/java-14.svg" alt="Java" placeholder="blurred" height={64} key="4" />
         <StaticImage src="../images/icons/c-1.svg" alt="C" placeholder="blurred" height={64} key="5" />
         <StaticImage src="../images/icons/c.svg" alt="C++" placeholder="blurred" height={64} key="6" />
-        <StaticImage src="../images/icons/mysql-6.svg" alt="MySQL" placeholder="blurred" height={64} key="7" />
-        <StaticImage src="../images/icons/mongodb-icon-1.svg" alt="MongoDB" placeholder="blurred" height={64} key="8" />
       </IconsDisplay>
       <TinyHero title="Tools" />
       <IconsDisplay>
@@ -44,6 +41,9 @@ export default function IndexPage({ data }) {
         <StaticImage src="../images/icons/git-icon.svg" alt="Git" placeholder="blurred" height={64} key="18" />
         <StaticImage src="../images/icons/visual-studio-code-1.svg" alt="Visual Studio Code" placeholder="blurred" height={64} key="19" />
         <StaticImage src="../images/icons/travis-ci-icon.svg" alt="Travis CI" placeholder="blurred" height={64} key="20" />
+        <StaticImage src="../images/icons/mysql-6.svg" alt="MySQL" placeholder="blurred" height={64} key="21" />
+        <StaticImage src="../images/icons/mongodb-icon-1.svg" alt="MongoDB" placeholder="blurred" height={64} key="22" />
+        <StaticImage src="../images/icons/latex.png" alt="LaTeX" placeholder="blurred" height={64} key="23" />
         </IconsDisplay>
       <TinyHero title="Top GitHub Projects" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -56,7 +56,7 @@ export default function IndexPage({ data }) {
               forks={project.node.forks}
               archived={project.node.archived}
               language={project.node.language}
-              key={project.node.full_name}
+              key={project.node.id}
             />
           ))}
       </div>

@@ -10,7 +10,7 @@ export default function Projects({ data }) {
   return (
     <Layout pageTitle="Projects">
       <TinyHero title="All GitHub Projects" />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
         {data.allInternalRepos.edges.map((project) => (
             <ProjectCard
               name={project.node.name}
@@ -20,7 +20,7 @@ export default function Projects({ data }) {
               forks={project.node.forks}
               archived={project.node.archived}
               language={project.node.language}
-              key={project.node.full_name}
+              key={project.node.id}
             />
           ))}
       </div>
