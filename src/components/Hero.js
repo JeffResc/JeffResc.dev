@@ -2,7 +2,17 @@ import React from "react";
 
 import { StaticImage } from "gatsby-plugin-image"
 
-const Hero = () => {
+function if_subtitle(subtitle) {
+  if (subtitle !== "false") {
+    return (
+      <p className="mt-8 text-xl text-white">
+        I'm a Junior at Clarkson University studying Computer Science.
+      </p>
+    )
+  }
+}
+
+const Hero = (props) => {
   return (
     <section>
       <div className="container mx-auto flex flex-col items-center px-4 py-8 text-center">
@@ -11,9 +21,7 @@ const Hero = () => {
           Hi, I'm<br/>
           <span className="block w-full text-sky-600 lg:inline">Jeff Rescignano</span>
         </h1>
-        <p className="mt-8 text-xl text-white">
-          I'm a Junior at Clarkson University studying Computer Science.
-        </p>
+        {if_subtitle(props.subtitle)}
       </div>
     </section>
   );

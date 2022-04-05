@@ -42,7 +42,6 @@ export const query = graphql`
             sort: { fields: [frontmatter___date], order: DESC }
             skip: $skip
             limit: $limit
-            filter: {fields: {source: {eq: "blog"}}}
         ) {
             edges {
                 node {

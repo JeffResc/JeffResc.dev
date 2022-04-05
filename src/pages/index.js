@@ -9,15 +9,10 @@ import TinyHero from "../components/TinyHero"
 import IconsDisplay from "../components/IconsDisplay"
 import ProjectCard from "../components/ProjectCard"
 
-// import GitHubProjects from "../../content/github_projects.json";
-// const TopGitHubProjects = GitHubProjects.filter(obj => {
-//   return obj.private === false && obj.fork === false;
-// }).sort((a, b) => { return b.stargazers_count - a.stargazers_count }).slice(0,6);
-
 export default function IndexPage({ data }) {
   return (
     <Layout pageTitle="Jeff Rescignano">
-      <Hero />
+      <Hero subtitle="true" />
       <TinyHero title="Languages" />
       <IconsDisplay>
         <StaticImage src="../images/icons/python-5.svg" alt="Python" placeholder="blurred" height={64} key="1" />

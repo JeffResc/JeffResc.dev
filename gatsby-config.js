@@ -102,7 +102,6 @@ module.exports = {
                 ],
             },
         },
-        `gatsby-plugin-mdx-source-name`,
         {
             resolve: 'gatsby-source-filesystem',
             options: {
@@ -110,14 +109,6 @@ module.exports = {
                 path: `${__dirname}/blog`,
             },
             __key: 'blog'
-        },
-        {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-                name: `projects`,
-                path: `${__dirname}/projects`,
-            },
-            __key: 'projects'
         },
         {
             resolve: 'gatsby-plugin-matomo',
@@ -131,7 +122,7 @@ module.exports = {
             resolve: "gatsby-source-apiserver",
             options: {
                 typePrefix: "internal__",
-                url: `https://api.github.com/users/JeffResc/repos`,
+                url: `https://api.github.com/users/JeffResc/repos?type=all&per_page=100&sort=updated&direction=desc`,
                 method: "get",
                 headers: {
                     "Content-Type": "application/json",
