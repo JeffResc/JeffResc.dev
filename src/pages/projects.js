@@ -45,7 +45,7 @@ export default function Projects({ data }) {
           }
           key="0"
         >
-          <span>A simple signage display program built for Raspberry Pis. Features a password-protected web interface, and a simple interface for controlling the display. Upload media assets through the web interface, and display them on the display. Live preview of the display is available through the web interface. Set active display hours, and the display will automatically turn off at the end of the day.</span>
+          <span>A simple signage display program built for the <a href="https://www.raspberrypi.com/" className="text-sky-400 after:content-['_↗']" target="_blank" rel="noopener noreferrer">Raspberry Pi</a>. Features a password-protected web interface, and a simple interface for controlling the display. Upload media assets through the web interface, and display them on the display. Live preview of the display is available through the web interface. Set active display hours, and the display will automatically turn off at the end of the day.</span>
           <br />
           <div className="my-2 flex flex-wrap gap-2">
             <StaticImage src="../images/icons/nodejs-1.svg" alt="NodeJS" placeholder="blurred" height={32} />
