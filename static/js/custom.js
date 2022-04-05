@@ -6,8 +6,9 @@ function checkNavBar() {
     }
 }
 
-window.onscroll = function() {
+document.addEventListener("DOMContentLoaded", function() {
+    window.onscroll = function() {
+        checkNavBar();
+    };
     checkNavBar();
-};
-
-checkNavBar();
+});
