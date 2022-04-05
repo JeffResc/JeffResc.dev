@@ -10,7 +10,7 @@ function left_or_right(index) {
 
 const BlogListItem = (props) => {
     return (
-        <div className={"flex flex-col overflow-hidden rounded-md shadow-sm hover:scale-105 duration-200 " + left_or_right(props.index)}>
+        <div className={"flex flex-col overflow-hidden rounded-md shadow-sm betterhover:hover:scale-105 duration-200 " + left_or_right(props.index)}>
             <GatsbyImage image={getImage(props.featuredImage)} alt={props.title} className="h-80 bg-slate-700 aspect-video" />
             <div className="flex flex-col justify-center flex-1 p-6 bg-gradient-to-r from-zinc-700 to-gray-600">
                 <Link to={props.url}>

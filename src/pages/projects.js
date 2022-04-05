@@ -33,7 +33,7 @@ export default function Projects({ data }) {
           </div>
           <br />
           <a href="https://github.com/JeffResc/jeffresc.github.io" target="_blank" rel="noopener noreferrer">
-            <button type="button" className="bg-sky-600 hover:bg-blue-600 font-medium text-xs uppercase px-6 py-2.5 rounded shadow-md">Explore on GitHub</button>
+            <button type="button" className="bg-sky-600 betterhover:hover:bg-blue-600 font-medium text-xs uppercase px-6 py-2.5 rounded shadow-md">Explore on GitHub</button>
           </a>
         </ProjectListItem>
         <ProjectListItem
@@ -56,7 +56,7 @@ export default function Projects({ data }) {
           </div>
           <br />
           <a href="https://github.com/JeffResc/SimpleSignage" target="_blank" rel="noopener noreferrer">
-            <button type="button" className="bg-sky-600 hover:bg-blue-600 font-medium text-xs uppercase px-6 py-2.5 rounded shadow-md">Explore on GitHub</button>
+            <button type="button" className="bg-sky-600 betterhover:hover:bg-blue-600 font-medium text-xs uppercase px-6 py-2.5 rounded shadow-md">Explore on GitHub</button>
           </a>
         </ProjectListItem>
         <ProjectListItem
@@ -79,7 +79,7 @@ export default function Projects({ data }) {
           </div>
           <br />
           <a href="https://github.com/JeffResc/DelTrack" target="_blank" rel="noopener noreferrer">
-            <button type="button" className="bg-sky-600 hover:bg-blue-600 font-medium text-xs uppercase px-6 py-2.5 rounded shadow-md">Explore on GitHub</button>
+            <button type="button" className="bg-sky-600 betterhover:hover:bg-blue-600 font-medium text-xs uppercase px-6 py-2.5 rounded shadow-md">Explore on GitHub</button>
           </a>
         </ProjectListItem>
       </BlogList>
@@ -105,10 +105,10 @@ export default function Projects({ data }) {
           </div>
           <br />
           <a href="https://github.com/CertifiedDataBoys/Recipe-Buddy" target="_blank" rel="noopener noreferrer">
-            <button type="button" className="bg-sky-600 hover:bg-blue-600 font-medium text-xs uppercase px-6 py-2.5 rounded shadow-md mx-2">Explore on GitHub</button>
+            <button type="button" className="bg-sky-600 betterhover:hover:bg-blue-600 font-medium text-xs uppercase px-6 py-2.5 rounded shadow-md mx-2">Explore on GitHub</button>
           </a>
           <a href="https://raw.githubusercontent.com/CertifiedDataBoys/Requirements-Document/build/Requirements_Document.pdf" target="_blank" rel="noopener noreferrer">
-            <button type="button" className="bg-sky-600 hover:bg-blue-600 font-medium text-xs uppercase px-6 py-2.5 rounded shadow-md mx-2">Software Requirements Specification Document</button>
+            <button type="button" className="bg-sky-600 betterhover:hover:bg-blue-600 font-medium text-xs uppercase px-6 py-2.5 rounded shadow-md mx-2">Software Requirements Specification Document</button>
           </a>
         </ProjectListItem>
         <ProjectListItem
@@ -131,10 +131,10 @@ export default function Projects({ data }) {
           </div>
           <br />
           <a href="https://github.com/JeffResc/CFSocial-Frontend" target="_blank" rel="noopener noreferrer">
-            <button type="button" className="bg-sky-600 hover:bg-blue-600 font-medium text-xs uppercase px-6 py-2.5 rounded shadow-md mx-2">Explore on GitHub</button>
+            <button type="button" className="bg-sky-600 betterhover:hover:bg-blue-600 font-medium text-xs uppercase px-6 py-2.5 rounded shadow-md mx-2">Explore on GitHub</button>
           </a>
           <a href="https://cfsocial.jeffresc.dev/" target="_blank" rel="noopener noreferrer">
-            <button type="button" className="bg-sky-600 hover:bg-blue-600 font-medium text-xs uppercase px-6 py-2.5 rounded shadow-md mx-2">CFSocial Demo</button>
+            <button type="button" className="bg-sky-600 betterhover:hover:bg-blue-600 font-medium text-xs uppercase px-6 py-2.5 rounded shadow-md mx-2">CFSocial Demo</button>
           </a>
         </ProjectListItem>
       </BlogList>

@@ -7,7 +7,7 @@ const PostHero = (props) => {
   return (
     <section>
       <div className="container mx-auto flex flex-col items-center px-4 py-4 text-center md:py-8 md:px-10 lg:px-32 xl:max-w-3xl">
-        <GatsbyImage image={featuredImage} alt={props.title} className="object-scale-down h-96 w-auto mb-4 rounded-lg hover:scale-105 duration-200" loading="eager" />
+        <GatsbyImage image={featuredImage} alt={props.title} className="object-scale-down h-96 w-auto mb-4 rounded-lg betterhover:hover:scale-105 duration-200" loading="eager" />
         <h1 className="text-4xl font-bold leading-none block w-full text-sky-600 lg:inline">
           {props.title}
         </h1>
