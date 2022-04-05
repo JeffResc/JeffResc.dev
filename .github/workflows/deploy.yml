@@ -23,13 +23,13 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@v4.2.2
+      uses: JamesIves/github-pages-deploy-action@v4.3.0
       with:
         git-config-name: Jeff Rescignano (Auto Deploy)
         git-config-email: jeff@jeffresc.dev
         commit-message: Auto Deploy From GitHub Actions
         single-commit: true
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         branch: gh-pages
         folder: public
         clean: true
