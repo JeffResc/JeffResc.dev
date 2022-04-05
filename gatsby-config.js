@@ -8,6 +8,7 @@ module.exports = {
         'gatsby-plugin-image',
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sitemap',
+        'gatsby-plugin-next-seo',
         {
             resolve: `gatsby-plugin-sharp`,
             options: {

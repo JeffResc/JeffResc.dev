@@ -11,7 +11,7 @@ import ProjectListItem from "../components/ProjectListItem"
 
 export default function Projects({ data }) {
   return (
-    <Layout pageTitle="Projects">
+    <Layout pageTitle="Projects" pageDescription="View my featured projects, academic projects, and all GitHub projects.">
       <TinyHero title="Featured Projects" />
       <BlogList>
         <ProjectListItem

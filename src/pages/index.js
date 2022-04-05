@@ -11,7 +11,7 @@ import ProjectCard from "../components/ProjectCard"
 
 export default function IndexPage({ data }) {
   return (
-    <Layout pageTitle="Jeff Rescignano">
+    <Layout pageTitle="Jeff Rescignano" pageDescription="Hi, I'm Jeff Rescignano. I'm a Junior at Clarkson University studying Computer Science. This is my development portfolio and blog!">
       <Hero subtitle="true" />
       <TinyHero title="Languages" />
       <IconsDisplay>

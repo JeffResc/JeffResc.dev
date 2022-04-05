@@ -8,7 +8,7 @@ import Layout from "../../templates/Layout";
 
 const BlogPost = ({ data }) => {
   return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
+    <Layout pageTitle={data.mdx.frontmatter.title} pageDescription={data.mdx.frontmatter.description}>
       <div className="mx-auto max-w-5xl m-4 p-16 bg-zinc-900 bg-opacity-75 rounded-lg">
         <PostHero
           title={data.mdx.frontmatter.title}
@@ -30,6 +30,7 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       frontmatter {
         title
+        description
         date(formatString: "MMMM D, YYYY")
         featuredImage {
           childImageSharp {

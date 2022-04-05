@@ -10,7 +10,7 @@ import Pager from "../components/Pager"
 
 const BlogPage = ({ data, pageContext }) => {
     return (
-        <Layout pageTitle="Blog">
+        <Layout pageTitle="Blog" pageDescription="Jeff Rescignano's development blog">
             <TinyHero title="Blog" />
             <BlogList>
                 {

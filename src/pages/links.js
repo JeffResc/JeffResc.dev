@@ -1,12 +1,16 @@
 import * as React from "react"
 
+import { GatsbySeo } from 'gatsby-plugin-next-seo'
+
+
 import Layout from "../templates/Layout"
 import Hero from "../components/Hero"
 import LinkURL from "../components/LinkURL"
 
 export default function Links() {
     return (
-        <Layout pageTitle="Links">
+        <Layout pageTitle="Links" pageDescription="Social Links">
+            <GatsbySeo noindex={true} />
             <Hero subtitle="false" />
             <div className="container mx-auto items-center max-w-2xl px-8">
                 <LinkURL name="Development & Portfolio Website" url="https://jeffresc.dev/" />
