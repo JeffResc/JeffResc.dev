@@ -1,3 +1,4 @@
 node_modules/
-build/
-offline_gh.json
+.cache/
+public
+content/github_projects.json

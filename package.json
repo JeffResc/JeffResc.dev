@@ -1,18 +1,51 @@
 {
-    "name": "jeffresc.github.io",
-    "version": "0.0.1",
-    "description": "A simple Node.js script to generate my website",
-    "main": "generate.js",
+    "name": "jeff-rescignano",
+    "version": "1.0.0",
+    "private": true,
+    "description": "jeff-rescignano",
     "author": "Jeff Rescignano",
-    "dependencies": {
-        "@octokit/rest": "^18.12.0",
-        "ejs": "^3.1.6",
-        "minify": "^7.2.2",
-        "ncp": "^2.0.0"
-    },
+    "keywords": [
+        "gatsby"
+    ],
     "scripts": {
-        "build_links": "node links.js",
-        "build_main": "node main.js",
-        "build": "node main.js && node links.js"
+        "develop": "gatsby develop",
+        "start": "gatsby develop",
+        "build": "gatsby build",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean"
+    },
+    "dependencies": {
+        "@mdx-js/mdx": "^1.6.22",
+        "@mdx-js/react": "^1.6.22",
+        "@react-icons/all-files": "^4.1.0",
+        "gatsby": "^4.11.1",
+        "gatsby-awesome-pagination": "^0.3.8",
+        "gatsby-plugin-image": "^2.11.1",
+        "gatsby-plugin-matomo": "^0.11.1",
+        "gatsby-plugin-mdx": "^3.11.1",
+        "gatsby-plugin-meta-redirect": "^1.1.1",
+        "gatsby-plugin-react-helmet": "^5.11.0",
+        "gatsby-plugin-sharp": "^4.11.1",
+        "gatsby-plugin-sitemap": "^5.11.1",
+        "gatsby-remark-autolink-headers": "^5.11.1",
+        "gatsby-remark-classes": "^1.0.2",
+        "gatsby-remark-images": "^6.11.1",
+        "gatsby-remark-prismjs": "^6.11.0",
+        "gatsby-remark-table-of-contents": "^2.0.0",
+        "gatsby-source-apiserver": "^2.1.8",
+        "gatsby-source-filesystem": "^4.11.1",
+        "gatsby-transformer-sharp": "^4.11.0",
+        "prism-react-renderer": "^1.3.1",
+        "prismjs": "^1.27.0",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "react-helmet": "^6.1.0"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.4",
+        "gatsby-plugin-postcss": "^5.11.0",
+        "postcss": "^8.4.12",
+        "tailwind-scrollbar": "^1.3.1",
+        "tailwindcss": "^3.0.23"
     }
 }
