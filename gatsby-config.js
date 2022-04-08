@@ -135,6 +135,7 @@ module.exports = {
                 verboseOutput: false,
             }
         },
+        'gatsby-source-build-date',
         'gatsby-plugin-meta-redirect'
     ]
 };
