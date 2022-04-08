@@ -25,6 +25,7 @@ const BlogPage = ({ data, pageContext }) => {
                                 node.node.frontmatter.description
                             )}
                             url={`/blog/${node.node.slug}`}
+                            slug={node.node.slug}
                             featuredImage={node.node.frontmatter.featuredImage}
                             key={node.node.id}
                         />

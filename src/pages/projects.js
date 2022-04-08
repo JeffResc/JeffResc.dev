@@ -15,6 +15,7 @@ export default function Projects({ data }) {
       <TinyHero title="Featured Projects" />
       <BlogList>
         <ProjectListItem
+          slug="jeffrescdev"
           index="0"
           title="JeffResc.dev"
           top_text="April 2022"
@@ -37,6 +38,7 @@ export default function Projects({ data }) {
           </a>
         </ProjectListItem>
         <ProjectListItem
+          slug="simplesignage"
           index="1"
           title="SimpleSignage"
           top_text="June 2020 - January 2022"
@@ -60,6 +62,7 @@ export default function Projects({ data }) {
           </a>
         </ProjectListItem>
         <ProjectListItem
+          slug="deltrack"
           index="2"
           title="DelTrack"
           top_text="November 2021 - December 2021"
@@ -86,6 +89,7 @@ export default function Projects({ data }) {
       <TinyHero title="Academic Projects" />
       <BlogList>
         <ProjectListItem
+          slug="recipebuddy"
           index="3"
           title="Recipe Buddy"
           top_text="Fall 2021"
@@ -112,6 +116,7 @@ export default function Projects({ data }) {
           </a>
         </ProjectListItem>
         <ProjectListItem
+          slug="cfsocial"
           index="4"
           title="CFSocial"
           top_text="November 21, 2021"
