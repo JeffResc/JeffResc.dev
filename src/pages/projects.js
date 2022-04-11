@@ -27,10 +27,18 @@ export default function Projects({ data }) {
           <span><a href="https://jeffresc.dev/" className="text-sky-400 after:content-['_↗']" target="_blank" rel="noopener noreferrer">JeffResc.dev</a> is my personal portfolio site built using <a href="https://www.gatsbyjs.com/" className="text-sky-400 after:content-['_↗']" target="_blank" rel="noopener noreferrer">Gatsby</a>, <a href="https://reactjs.org/" className="text-sky-400 after:content-['_↗']" target="_blank" rel="noopener noreferrer">React</a>, and <a href="https://tailwindcss.com/" className="text-sky-400 after:content-['_↗']" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>. It is automatically deployed to <a href="https://vercel.com/" className="text-sky-400 after:content-['_↗']" target="_blank" rel="noopener noreferrer">Vercel</a>. It also has a <a href="/jeffresc.dev-20220405T083141.html" className="text-sky-400 after:content-['_↗']" target="_blank" rel="noopener noreferrer">perfect Google Lighthouse score</a> proving it to be performant and accessible while following best practices and utilizing SEO.</span>
           <br />
           <div className="my-2 flex flex-wrap gap-2">
-            <StaticImage src="../images/icons/gatsby.svg" alt="Gatsby" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/react-2.svg" alt="React" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/tailwindcss-icon.svg" alt="Tailwind CSS" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/github-icon.svg" alt="GitHub" placeholder="blurred" height={32} />
+            <span title="Gatsby">
+              <StaticImage src="../images/icons/gatsby.svg" alt="Gatsby" placeholder="blurred" height={32} />
+            </span>
+            <span title="React">
+              <StaticImage src="../images/icons/react-2.svg" alt="React" placeholder="blurred" height={32} />
+            </span>
+            <span title="Tailwind CSS">
+              <StaticImage src="../images/icons/tailwindcss-icon.svg" alt="Tailwind CSS" placeholder="blurred" height={32} />
+            </span>
+            <span title="GitHub">
+              <StaticImage src="../images/icons/github-icon.svg" alt="GitHub" placeholder="blurred" height={32} />
+            </span>
           </div>
           <br />
           <a href="https://github.com/JeffResc/jeffresc.github.io" target="_blank" rel="noopener noreferrer">
@@ -50,11 +58,21 @@ export default function Projects({ data }) {
           <span>A simple signage display program built for the <a href="https://www.raspberrypi.com/" className="text-sky-400 after:content-['_↗']" target="_blank" rel="noopener noreferrer">Raspberry Pi</a>. Features a password-protected web interface, and a simple interface for controlling the display. Upload media assets through the web interface, and display them on the display. Live preview of the display is available through the web interface. Set active display hours, and the display will automatically turn off at the end of the day.</span>
           <br />
           <div className="my-2 flex flex-wrap gap-2">
-            <StaticImage src="../images/icons/nodejs-1.svg" alt="NodeJS" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/logo-javascript.svg" alt="JavaScript" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/Moby-logo.webp" alt="Docker" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/raspberry-pi.svg" alt="Raspberry Pi" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/linux-tux.svg" alt="Linux" placeholder="blurred" height={32} />
+            <span title="NodeJS">
+              <StaticImage src="../images/icons/nodejs-1.svg" alt="NodeJS" placeholder="blurred" height={32} />
+            </span>
+            <span title="JavaScript">
+              <StaticImage src="../images/icons/logo-javascript.svg" alt="JavaScript" placeholder="blurred" height={32} />
+            </span>
+            <span title="Docker">
+              <StaticImage src="../images/icons/Moby-logo.webp" alt="Docker" placeholder="blurred" height={32} />
+            </span>
+            <span title="Raspberry Pi">
+              <StaticImage src="../images/icons/raspberry-pi.svg" alt="Raspberry Pi" placeholder="blurred" height={32} />
+            </span>
+            <span title="Linux">
+              <StaticImage src="../images/icons/linux-tux.svg" alt="Linux" placeholder="blurred" height={32} />
+            </span>
           </div>
           <br />
           <a href="https://github.com/JeffResc/SimpleSignage" target="_blank" rel="noopener noreferrer">
@@ -74,11 +92,21 @@ export default function Projects({ data }) {
           <span>DelTrack is an all-in-one delivery tracking solution supporting 24 couriers (USPS, UPS, FedEx, DHL, etc.) and counting! Notifications can be setup for an email when a package has an exception or has not had a new tracking event in 24 hours. Track unlimited packages from a centralized location, store package information in a database for easy reference at a later date, locally authenticate users, and use a live scanner using a camera or image upload to easily add deliveries from tracking label barcodes.</span>
           <br />
           <div className="my-2 flex flex-wrap gap-2">
-            <StaticImage src="../images/icons/nodejs-1.svg" alt="NodeJS" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/logo-javascript.svg" alt="JavaScript" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/mongodb-icon-1.svg" alt="MongoDB" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/Moby-logo.webp" alt="Docker" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/linux-tux.svg" alt="Linux" placeholder="blurred" height={32} />
+            <span title="NodeJS">
+              <StaticImage src="../images/icons/nodejs-1.svg" alt="NodeJS" placeholder="blurred" height={32} />
+            </span>
+            <span title="JavaScript">
+              <StaticImage src="../images/icons/logo-javascript.svg" alt="JavaScript" placeholder="blurred" height={32} />
+            </span>
+            <span title="MongoDB">
+              <StaticImage src="../images/icons/mongodb-icon-1.svg" alt="MongoDB" placeholder="blurred" height={32} />
+            </span>
+            <span title="Docker">
+              <StaticImage src="../images/icons/Moby-logo.webp" alt="Docker" placeholder="blurred" height={32} />
+            </span>
+            <span title="Linux">
+              <StaticImage src="../images/icons/linux-tux.svg" alt="Linux" placeholder="blurred" height={32} />
+            </span>
           </div>
           <br />
           <a href="https://github.com/JeffResc/DelTrack" target="_blank" rel="noopener noreferrer">
@@ -101,11 +129,21 @@ export default function Projects({ data }) {
           <span>Built using Python and <a href="https://flask.palletsprojects.com/" className="text-sky-400 after:content-['_↗']" target="_blank" rel="noopener noreferrer">Flask</a>, Recipe Buddy is a multi-functional tool for organizing recipes, pantry items, and dietary restrictions. Recipe Buddy offers extensive user management features such as authentication, recipe viewing with multi-media, and various other feautres. Course project for CS 350 at Clarkson University.</span>
           <br />
           <div className="my-2 flex flex-wrap gap-2">
-            <StaticImage src="../images/icons/python-5.svg" alt="Python" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/flask.png" alt="Flask" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/Moby-logo.webp" alt="Docker" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/mysql-6.svg" alt="MySQL" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/latex.png" alt="LaTeX" placeholder="blurred" height={32} />
+            <span title="Python">
+              <StaticImage src="../images/icons/python-5.svg" alt="Python" placeholder="blurred" height={32} />
+            </span>
+            <span title="Flask">
+              <StaticImage src="../images/icons/flask.png" alt="Flask" placeholder="blurred" height={32} />
+            </span>
+            <span title="Docker">
+              <StaticImage src="../images/icons/Moby-logo.webp" alt="Docker" placeholder="blurred" height={32} />
+            </span>
+            <span title="MySQL">
+              <StaticImage src="../images/icons/mysql-6.svg" alt="MySQL" placeholder="blurred" height={32} />
+            </span>
+            <span title="LaTeX">
+              <StaticImage src="../images/icons/latex.png" alt="LaTeX" placeholder="blurred" height={32} />
+            </span>
           </div>
           <br />
           <a href="https://github.com/CertifiedDataBoys/Recipe-Buddy" target="_blank" rel="noopener noreferrer">
@@ -128,11 +166,21 @@ export default function Projects({ data }) {
           <span>Built using <a href="https://workers.cloudflare.com/" className="text-sky-400 after:content-['_↗']" target="_blank" rel="noopener noreferrer">Cloudflare Workers</a>, <a href="https://cfsocial.jeffresc.dev/" className="text-sky-400 after:content-['_↗']" target="_blank" rel="noopener noreferrer">CFSocial</a> is a social media website featuring user authentication, posting (with multi-media), editing posts, reactions (like, heart, celebrate, laugh), upvote/downvote, and commenting.</span>
           <br />
           <div className="my-2 flex flex-wrap gap-2">
-            <StaticImage src="../images/icons/cloudflare-workers.svg" alt="Cloudflare Workers" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/JQuery-Logo.svg" alt="jQuery" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/logo-javascript.svg" alt="JavaScript" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/HTML5_Logo.svg" alt="HTML5" placeholder="blurred" height={32} />
-            <StaticImage src="../images/icons/CSS3_logo_and_wordmark.svg" alt="CSS3" placeholder="blurred" height={32} />
+            <span title="Cloudflare Workers">
+              <StaticImage src="../images/icons/cloudflare-workers.svg" alt="Cloudflare Workers" placeholder="blurred" height={32} />
+            </span>
+            <span title="jQuery">
+              <StaticImage src="../images/icons/JQuery-Logo.svg" alt="jQuery" placeholder="blurred" height={32} />
+            </span>
+            <span title="JavaScript">
+              <StaticImage src="../images/icons/logo-javascript.svg" alt="JavaScript" placeholder="blurred" height={32} />
+            </span>
+            <span title="HTML">
+              <StaticImage src="../images/icons/HTML5_Logo.svg" alt="HTML5" placeholder="blurred" height={32} />
+            </span>
+            <span title="CSS">
+              <StaticImage src="../images/icons/CSS3_logo_and_wordmark.svg" alt="CSS3" placeholder="blurred" height={32} />
+            </span>
           </div>
           <br />
           <a href="https://github.com/JeffResc/CFSocial-Frontend" target="_blank" rel="noopener noreferrer">
