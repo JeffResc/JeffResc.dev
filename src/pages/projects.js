@@ -30,6 +30,7 @@ export default function Projects({ data }) {
             <StaticImage src="../images/icons/gatsby.svg" alt="Gatsby" placeholder="blurred" height={32} />
             <StaticImage src="../images/icons/react-2.svg" alt="React" placeholder="blurred" height={32} />
             <StaticImage src="../images/icons/tailwindcss-icon.svg" alt="Tailwind CSS" placeholder="blurred" height={32} />
+            <StaticImage src="../images/icons/vercel.svg" alt="Vercel" placeholder="blurred" height={32} />
             <StaticImage src="../images/icons/github-icon.svg" alt="GitHub" placeholder="blurred" height={32} />
           </div>
           <br />
