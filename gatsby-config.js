@@ -135,7 +135,25 @@ module.exports = {
                 verboseOutput: false,
             }
         },
-        'gatsby-source-build-date',
+        {
+            resolve: 'gatsby-source-build-date',
+            options: {
+                // Generate ISO8601 date.
+                // See: https://stackoverflow.com/a/58633686/55808
+                locales: 'en-US',
+                options: {
+                    timeZone: 'UTC',
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: false,
+                    timeZoneName: 'short',
+                },
+            },
+        },
         'gatsby-plugin-meta-redirect'
     ]
 };
