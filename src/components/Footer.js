@@ -23,8 +23,7 @@ const Footer = () => {
       <div className="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
         <div className="flex flex-row pr-3 space-x-4 sm:space-x-8">
           ©️ 2020-{buildDate.year()} JeffResc
-        </div>
-        <div className="flex flex-row pr-3 space-x-4 sm:space-x-8">
+          <br />
           <span title={buildDate.toString()}>Last built {buildDate.fromNow()}</span>
         </div>
       </div>
