@@ -15,7 +15,7 @@ module.exports = {
                 defaults: {
                     formats: [`auto`, `webp`, `avif`],
                     placeholder: `blurred`,
-                    quality: 85,
+                    quality: 90,
                     backgroundColor: `transparent`,
                 },
             },
