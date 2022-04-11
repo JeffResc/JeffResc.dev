@@ -121,7 +121,7 @@ export default function Projects({ data }) {
           title="CFSocial"
           top_text="November 21, 2021"
           featuredImage={
-            <StaticImage src="https://github.com/JeffResc/CFSocial-Frontend/raw/main/.demo-images/screencapture-cfsocial-jeffresc-dev-2022-04-04-22_48_55.png" alt="CFSocial Demo" className="h-80 bg-slate-700 aspect-video" />
+            <StaticImage src="https://raw.githubusercontent.com/JeffResc/CFSocial-Frontend/main/.demo-images/screencapture-cfsocial-jeffresc-dev-2022-04-04-22_48_55.png" alt="CFSocial Demo" className="h-80 bg-slate-700 aspect-video" />
           }
           key="3"
         >
