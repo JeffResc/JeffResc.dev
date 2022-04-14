@@ -34,5 +34,7 @@ exports.createPages = async({ graphql, actions }) => {
     /* REDIRECTS */
     const { createRedirect } = actions
     createRedirect({ fromPath: '/blog/2020-10-10', toPath: '/blog/sonoff-d1-dimmer-running-esphome', isPermanent: true });
+    createRedirect({ fromPath: '/Unmanic-API', toPath: 'https://jeffresc.github.io/Unmanic-API/', isPermanent: false });
+    createRedirect({ fromPath: '/OneTracker-API', toPath: 'https://jeffresc.github.io/OneTracker-API/', isPermanent: false });
     /* END REDIRECTS */
 }
