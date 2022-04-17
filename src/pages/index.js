@@ -42,7 +42,10 @@ export default function IndexPage({ data }) {
   return (
     <Layout pageTitle="Jeff Rescignano" pageDescription="Hi, I'm Jeff Rescignano. I'm a Junior at Clarkson University studying Computer Science. This is my development portfolio and blog!">
       <Helmet>
-        <script type="application/ld+json">{person_data}</script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(person_data) }}
+        />
       </Helmet>
       <Hero subtitle="true" />
       <TinyHero title="Languages" />
