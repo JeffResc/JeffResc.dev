@@ -2,6 +2,7 @@ import * as React from "react"
 
 import { StaticImage } from "gatsby-plugin-image"
 import { graphql } from 'gatsby'
+import { Helmet } from "react-helmet"
 
 import Layout from "../templates/Layout"
 import Hero from "../components/Hero"

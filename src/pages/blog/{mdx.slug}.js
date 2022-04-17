@@ -1,11 +1,12 @@
 import * as React from "react";
 
 import { graphql } from "gatsby";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import { getSrc } from "gatsby-plugin-image"
+import { Helmet } from "react-helmet"
 
-import PostHero from "../../components/PostHero";
-import Layout from "../../templates/Layout";
+import PostHero from "../../components/PostHero"
+import Layout from "../../templates/Layout"
 
 const BlogPost = ({ data }) => {
   const article_data = {
