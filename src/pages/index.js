@@ -2,6 +2,7 @@ import * as React from "react"
 
 import { StaticImage } from "gatsby-plugin-image"
 import { graphql } from 'gatsby'
+import { Helmet } from "react-helmet"
 
 import Layout from "../templates/Layout"
 import Hero from "../components/Hero"
@@ -10,8 +11,42 @@ import IconsDisplay from "../components/IconsDisplay"
 import ProjectCard from "../components/ProjectCard"
 
 export default function IndexPage({ data }) {
+  const person_data = {
+    "@context": "http://www.schema.org",
+    "@type": "Person",
+    "@id": "https://jeffresc.dev",
+    "name": "Jeff Rescignano",
+    "alternateName": "Jeffrey Rescignano",
+    "nationality": "American",
+    "birthPlace" : {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "NY",
+        "addressCountry": "United States"
+      }
+    },
+    "gender": "Male",
+    "Description": "Student",
+    "disambiguatingDescription": "Student Studying Computer Science at Clarkson University",
+    "jobTitle": "Student",
+    "url": "https://jeffresc.dev/",
+    "image": "https://jeffresc.dev/img/Profile.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "NY",
+      "addressCountry": "United States"
+    }
+  }
+
   return (
     <Layout pageTitle="Jeff Rescignano" pageDescription="Hi, I'm Jeff Rescignano. I'm a Junior at Clarkson University studying Computer Science. This is my development portfolio and blog!">
+      <Helmet>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(person_data) }}
+        />
+      </Helmet>
       <Hero subtitle="true" />
       <TinyHero title="Languages" />
       <IconsDisplay>
