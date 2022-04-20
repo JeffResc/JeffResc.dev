@@ -1,6 +1,7 @@
 import * as React from "react"
 
 import { graphql } from 'gatsby'
+import { Helmet } from "react-helmet"
 
 import Layout from "../templates/Layout"
 import TinyHero from "../components/TinyHero"
@@ -10,7 +11,10 @@ import Pager from "../components/Pager"
 
 const BlogPage = ({ data, pageContext }) => {
     return (
-        <Layout pageTitle="Blog" pageDescription="Jeff Rescignano's development blog">
+        <Layout pageTitle="Blog" pageDescription="Jeff Rescignano's Development Blog">
+            <Helmet>
+                <link rel="canonical" href="https://jeffresc.dev/blog/" />
+            </Helmet>
             <TinyHero title="Blog" />
             <BlogList>
                 {

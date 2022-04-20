@@ -12,13 +12,14 @@ const BlogPost = ({ data }) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title} pageDescription={data.mdx.frontmatter.description}>
       <Helmet>
+        <link rel="canonical" href={"https://jeffresc.dev/blog/" + data.mdx.slug + "/"} />
         <script type='application/ld+json'>
           {`{
             "@context": "https://schema.org",
             "@type": "NewsArticle",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://jeffresc.dev/blog/${data.mdx.slug}"
+              "@id": "https://jeffresc.dev/blog/${data.mdx.slug}/"
             },
             "headline": "${data.mdx.frontmatter.title}",
             "image": [

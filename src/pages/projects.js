@@ -2,6 +2,7 @@ import * as React from "react"
 
 import { graphql } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
+import { Helmet } from "react-helmet"
 
 import Layout from "../templates/Layout"
 import TinyHero from "../components/TinyHero"
@@ -12,6 +13,9 @@ import ProjectListItem from "../components/ProjectListItem"
 export default function Projects({ data }) {
   return (
     <Layout pageTitle="Projects" pageDescription="View my featured projects, academic projects, and all GitHub projects.">
+      <Helmet>
+        <link rel="canonical" href="https://jeffresc.dev/projects/" />
+      </Helmet>
       <TinyHero title="Featured Projects" />
       <BlogList>
         <ProjectListItem
