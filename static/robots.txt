@@ -1,6 +1,4 @@
 User-Agent: *
-Disallow: /links
-Disallow: /links/
-Disallow: /links/index.html
+Allow: /
 
 Sitemap: https://jeffresc.dev/sitemap/sitemap-index.xml
