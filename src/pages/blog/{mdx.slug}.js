@@ -25,7 +25,7 @@ const BlogPost = ({ data }) => {
               "${getSrc(data.mdx.frontmatter.featuredImage)}"
             ],
             "datePublished": "${data.mdx.frontmatter.date}",
-            "dateModified": "${data.mdx.frontmatter.date}",
+            "dateModified": "${data.mdx.frontmatter.modified_date}",
             "author": {
               "@type": "Person",
               "name": "Jeffrey Rescignano",
@@ -37,7 +37,8 @@ const BlogPost = ({ data }) => {
       <div className="mx-auto max-w-5xl m-4 p-16 bg-zinc-900 bg-opacity-75 rounded-lg">
         <PostHero
           title={data.mdx.frontmatter.title}
-          subtitle={data.mdx.frontmatter.date}
+          date={data.mdx.frontmatter.date}
+          modified_date={data.mdx.frontmatter.modified_date}
           featuredImage={data.mdx.frontmatter.featuredImage}
         />
         <div className="text-white">
@@ -57,6 +58,7 @@ export const query = graphql`
         title
         description
         date(formatString: "MMMM D, YYYY")
+        modified_date(formatString: "MMMM D, YYYY")
         featuredImage {
           childImageSharp {
             gatsbyImageData(
