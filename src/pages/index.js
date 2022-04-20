@@ -1,9 +1,7 @@
 import * as React from "react"
 
 import { StaticImage } from "gatsby-plugin-image"
-import { graphql } from 'gatsby'
-import { Person } from "schema-dts"
-import { JsonLd } from "react-schemaorg"
+import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import Layout from "../templates/Layout"
@@ -16,32 +14,32 @@ export default function IndexPage({ data }) {
   return (
     <Layout pageTitle="Jeff Rescignano" pageDescription="Hi, I'm Jeff Rescignano. I'm a Junior at Clarkson University studying Computer Science. This is my development portfolio and blog!">
       <Helmet>
-        <script
-          {...jsonLdScriptProps<Person>({
+        <script type='application/ld+json'>
+          {`{
             "@context": "https://schema.org",
             "@type": "Person",
-            givenName: "Jeffrey",
-            familyName: "Rescignano",
-            nationality: "American",
-            description: "Student Studying Computer Science at Clarkson University",
-            jobTitle: "Student",
+            "givenName": "Jeffrey",
+            "familyName": "Rescignano",
+            "nationality": "American",
+            "description": "Student Studying Computer Science at Clarkson University",
+            "jobTitle": "Student",
             "url": "https://jeffresc.dev/",
             "image": "https://jeffresc.dev/img/Profile.jpg",
-            birthPlace: {
-              address: {
-                addressRegion: "NY",
-                addressCountry: "United States"
+            "birthPlace": {
+              "address": {
+                "addressRegion": "NY",
+                "addressCountry": "United States"
               }
             },
-            homeLocation: {
-              address: {
-                addressRegion: "NY",
-                addressCountry: "United States"
+            "homeLocation": {
+              "address": {
+                "addressRegion": "NY",
+                "addressCountry": "United States"
               }
             },
-            knowsAbout: ["Computer Science", "Advanced Programming Concepts", "Algorithms and Data Structures", "Computer Organization", "Computer and Network Security", "Database Systems", "Embedded Systems", "Human-Computer Interaction", "Programming Languages", "Software Design & Development", "Linear Algebra"],
-          }}
-        />
+            "knowsAbout": ["Computer Science", "Advanced Programming Concepts", "Algorithms and Data Structures", "Computer Organization", "Computer and Network Security", "Database Systems", "Embedded Systems", "Human-Computer Interaction", "Programming Languages", "Software Design & Development", "Linear Algebra"]
+          }`}
+        </script>
       </Helmet>
       <Hero subtitle="true" />
       <TinyHero title="Languages" />
