@@ -97,6 +97,7 @@ module.exports = {
                                 "heading[depth=6]": "text-sm mt-2",
                                 "paragraph": "text-base",
                                 "link": "text-sky-400 after:content-['_↗']",
+                                "list": "list-disc pl-4",
                             }
                         }
                     },
