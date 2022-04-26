@@ -15,6 +15,13 @@ module.exports = {
         'after:content-[\'_↗\']',
         'list-disc',
         'pl-4',
+        'min-w-full',
+        'text-xs',
+        'text-right',
+        'border-b',
+        'border-opacity-20',
+        'border-neutral-700',
+        'bg-neutral-800',
     ],
     theme: {
         fontSize: {

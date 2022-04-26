@@ -1,7 +1,7 @@
 ---
 title: "Creating a Smart LED Dimmer"
-date: "2021-08-31"
-modified_date: "2022-04-20"
+date: "2022-04-25"
+modified_date: "2022-04-25"
 featuredImage: ./images/creating-a-smart-led-dimmer/render.png
 description: "Creating a Smart LED Dimmer to control cheap LED lights"
 embeddedImagesLocal:
@@ -9,6 +9,8 @@ embeddedImagesLocal:
   - ./images/creating-a-smart-led-dimmer/schematic.png
   - ./images/creating-a-smart-led-dimmer/final-image.jpg
   - ./images/creating-a-smart-led-dimmer/final-image-2.jpg
+  - ./images/creating-a-smart-led-dimmer/pcb-front.png
+  - ./images/creating-a-smart-led-dimmer/pcb-back.png
 ---
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 
@@ -18,10 +20,10 @@ import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 ```
 
 # Introduction
-I frequently see [very cheap battery operated monochrome string lights](https://www.walmart.com/ip/859641125) on clearance at local stores such as Walmart. I wanted to be able to take advantage of these deals, but most of the lighting equipment that I own is "smart" and tied into the [Home Assistant](https://home-assistant.io/) home automation system. I wanted to be able to bring these lights into my home automation system to control them more easily and tie them into my automations. There is the [QuinLED controller](https://quinled.info/), but it was a little overkill for these types of cheap monochrome string lights.
+I frequently see [very cheap battery-operated monochrome string lights](https://www.walmart.com/ip/859641125) on clearance at stores locally such as Walmart. I wanted to be able to take advantage of these deals, but most of the lighting equipment that I own is "smart" and tied into the [Home Assistant](https://home-assistant.io/) home automation system. I wanted to be able to bring these lights into my home automation system to control them more easily and tie them into my automations. There is the [QuinLED controller](https://quinled.info/), but it was a little overkill for these types of cheap monochrome string lights.
 
 # Solution Proposal
-I was looking for a device to satify the following requirements:
+I was looking for a device to satisfy the following requirements:
 1. The device should be able to control at least one set of string lights (bonus points for multiple sets).
 2. The device should be able to control the brightness of the lights.
 3. The device should be able to control them via [Home Assistant](https://home-assistant.io/).
@@ -30,17 +32,23 @@ I was looking for a device to satify the following requirements:
 # Schematic
 <GatsbyImage className="object-scale-down rounded-lg" alt="Smart LED Dimmer Schematic" image={getImage(props.localImages[1])} />
 
+# PCB Layout
+<div class="flex flow-row gap-4">
+  <GatsbyImage className="object-scale-down h-1/2 w-1/2 rounded-lg" alt="Smart LED Dimmer PCB Layout Front" image={getImage(props.localImages[4])} />
+  <GatsbyImage className="object-scale-down h-1/2 w-1/2 rounded-lg" alt="Smart LED Dimmer PCB Layout Back" image={getImage(props.localImages[5])} />
+</div>
+
 # Parts List
-These are the parts I decided to go with for my build. It was purely based off of availability and cost. I was not familiar with many of these brands (other than Sensirion) before using them, but I have not had any issues with my device.
+These are the parts I decided to go with for my build. It was purely based on availability and cost. I was not familiar with many of these brands (other than Sensirion) before using them, but I have not had any issues with my device.
 
 |Name                 |Designator|Footprint                     |Quantity|Manufacturer Part       |Manufacturer|Supplier|Supplier Part|
 |---------------------|----------|------------------------------|--------|------------------------|------------|--------|-------------|
-|Header-Male-2.54_1x10|H1        |HDR-TH_10P-P2.54-V-M-1        |1       |Headers  Pins2.54mm1*10P|            |LCSC    |C57369       |
+|Header-Male-2.54_1x10|H1        |HDR-TH_10P-P2.54-V-M-1        |1       |Headers Pins2.54mm1*10P |            |LCSC    |C57369       |
 |ESP32 Left           |P1        |HDR-TH_8P-P2.54-V-F-1         |1       |Female headerHDR1X8-2.54|BOOMELE     |LCSC    |C27438       |
 |ESP32 Right          |P2        |HDR-TH_8P-P2.54-V-F-1         |1       |Female headerHDR1X8-2.54|BOOMELE     |LCSC    |C27438       |
 |2N7000               |Q1,Q2     |TO-92-3_L4.9-W3.7-P1.27-L     |2       |2N7000                  |CJ          |LCSC    |C9114        |
 |100K                 |R1,R2     |R2512                         |2       |RMC2512100K1%N          |Tyohm       |LCSC    |C269364      |
-|Screw Terminal Block |U1        |CONN-TH_JL301-50004U01        |1       |JL301-50004U01          |JILN(锦凌)   |LCSC    |C1509680     |
+|Screw Terminal Block |U1        |CONN-TH_JL301-50004U01        |1       |JL301-50004U01          |JILN(锦凌)  |LCSC    |C1509680     |
 |100nF                |U2        |CAP-TH_L10.5-W5.0-P7.50-D1.2  |1       |-                       |Tongfeng    |LCSC    |C281835      |
 |SHTC3                |U3        |SENSORM-SMD_4P-L2.0-W2.0-P1.00|1       |SHTC3                   |Sensirion   |LCSC    |C194656      |
 
@@ -51,7 +59,7 @@ This is a digital render of the board using [MeshLab](https://www.meshlab.net/).
 <GatsbyImage className="object-scale-down rounded-lg" alt="Smart LED Dimmer Digital Render" image={getImage(props.localImages[0])} />
 
 # Software
-For the software the control the onboard ESP32 (or ESP8266), I decided to go with [ESPHome](https://esphome.io/) due to its ease of use, especially with [Home Assistant](https://home-assistant.io/). This is an example that I wrote which treats both LED outputs as one controller, that way two sets of lights can be controlled simoultaneously. It can also read the value of the onboard [SHTC3](https://sensirion.com/media/documents/643F9C8E/6164081E/Sensirion_Humidity_Sensors_SHTC3_Datasheet.pdf) and report back to [Home Assistant](https://home-assistant.io/).
+For the software to control the onboard ESP32 (or ESP8266), I decided to go with [ESPHome](https://esphome.io/) due to its ease of use, especially with [Home Assistant](https://home-assistant.io/). This is an example that I wrote which treats both LED outputs as one controller, that way two sets of lights can be controlled simultaneously. It can also read the value of the onboard [SHTC3](https://sensirion.com/media/documents/643F9C8E/6164081E/Sensirion_Humidity_Sensors_SHTC3_Datasheet.pdf) and report back to [Home Assistant](https://home-assistant.io/).
 
 ```yaml
 substitutions:
