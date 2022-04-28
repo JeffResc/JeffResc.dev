@@ -35,7 +35,7 @@ const BlogPost = ({ data }) => {
           }`}
         </script>
       </Helmet>
-      <div className="mx-auto max-w-5xl m-4 p-16 bg-zinc-900 bg-opacity-75 rounded-lg">
+      <div className="mx-auto max-w-5xl m-4 sm:p-6 md:p-6 lg:p-6 xl:p-6 2xl:p-6 bg-zinc-900 bg-opacity-75 rounded-lg">
         <PostHero
           title={data.mdx.frontmatter.title}
           date={data.mdx.frontmatter.date}
