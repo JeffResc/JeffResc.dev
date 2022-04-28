@@ -1,6 +1,27 @@
 module.exports = {
     content: [
-        "./src/**/*.{js,jsx,ts,tsx}",
+        "./src/**/**/*.{js,jsx,ts,tsx}",
+    ],
+    safelist: [
+        'mt-2',
+        'text-4xl',
+        'text-3xl',
+        'text-2xl',
+        'text-xl',
+        'text-lg',
+        'text-sm',
+        'text-base',
+        'text-sky-400',
+        'after:content-[\'_↗\']',
+        'list-disc',
+        'pl-4',
+        'min-w-full',
+        'text-xs',
+        'text-right',
+        'border-b',
+        'border-opacity-20',
+        'border-neutral-700',
+        'bg-neutral-800',
     ],
     theme: {
         fontSize: {

@@ -97,6 +97,9 @@ module.exports = {
                                 "heading[depth=6]": "text-sm mt-2",
                                 "paragraph": "text-base",
                                 "link": "text-sky-400 after:content-['_↗']",
+                                "list": "list-disc pl-4",
+                                "table": "min-w-full text-xs",
+                                "tablerow": "text-right border-b border-opacity-20 border-neutral-700 bg-neutral-800",
                             }
                         }
                     },
