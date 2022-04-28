@@ -20,7 +20,7 @@ import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 ```
 
 # Introduction
-I frequently see [very cheap battery-operated monochrome string lights](https://www.walmart.com/ip/859641125) on clearance at stores locally such as Walmart. I wanted to be able to take advantage of these deals, but most of the lighting equipment that I own is "smart" and tied into the [Home Assistant](https://home-assistant.io/) home automation system. I wanted to be able to bring these lights into my home automation system to control them more easily and tie them into my automations. There is the [QuinLED controller](https://quinled.info/), but it was a little overkill for these types of cheap monochrome string lights.
+I frequently see [cheap battery-operated monochrome string lights](https://www.walmart.com/ip/859641125) on clearance at stores locally such as Walmart. I wanted to be able to take advantage of these deals, but most of the lighting equipment that I own is "smart" and tied into the [Home Assistant](https://home-assistant.io/) home automation system. I wanted to be able to bring these lights into my home automation system to control them more easily and tie them into my automations. There is the [QuinLED controller](https://quinled.info/), but it was a little overkill for these types of cheap monochrome string lights.
 
 # Solution Proposal
 I was looking for a device to satisfy the following requirements:
@@ -28,6 +28,9 @@ I was looking for a device to satisfy the following requirements:
 2. The device should be able to control the brightness of the lights.
 3. The device should be able to control them via [Home Assistant](https://home-assistant.io/).
 4. Bonus points for extra headers for peripheral devices such as a [PIR Motion Sensor](https://esphome.io/cookbook/pir.html).
+5. Bonus points for an onboard temperature sensor. They're cheap and can serve a variety of purposes for automations.
+
+I created the following solution.
 
 # Schematic
 <GatsbyImage className="object-scale-down rounded-lg" alt="Smart LED Dimmer Schematic" image={getImage(props.localImages[1])} />
@@ -133,12 +136,14 @@ output:
   - platform: ledc
     id: LD1
     pin: GPIO26
-    max_power: 0.60
+    # You may want to configure a maximum power output depending on your particular lights, to ensure they are not damaged by being over-powered.
+    # max_power: 0.60
     frequency: 1220Hz
   - platform: ledc
     id: LD2
     pin: GPIO23
-    max_power: 0.60
+    # You may want to configure a maximum power output depending on your particular lights, to ensure they are not damaged by being over-powered.
+    # max_power: 0.60
     frequency: 1220Hz
 ```
 # Final Results
@@ -147,3 +152,4 @@ I sent the final design files to [JLCPCB](https://www.jlcpcb.com/) for productio
   <GatsbyImage className="object-scale-down h-1/2 w-1/2 rounded-lg" alt="Smart LED Dimmer Physical Device 1" image={getImage(props.localImages[2])} />
   <GatsbyImage className="object-scale-down h-1/2 w-1/2 rounded-lg" alt="Smart LED Dimmer Physical Device 2" image={getImage(props.localImages[3])} />
 </div>
+It works great for controlling a variety of lights, with Wi-Fi and dimming support, it works great for my use case. If you have any questions about the design or software, feel free to reach out at <my name>@jeffresc.dev and I'd be happy to help out.
