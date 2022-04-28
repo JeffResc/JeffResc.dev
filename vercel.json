@@ -1,3 +1,7 @@
 {
-    "trailingSlash": true
+    "trailingSlash": true,
+    "cleanUrls": true,
+    "redirects": [
+        { "source": "/blog/2020-10-10/", "destination": "/blog/sonoff-d1-dimmer-running-esphome/", "permanent": false }
+    ]
 }
