@@ -1,3 +1,5 @@
+const resolve = require('path').resolve;
+
 module.exports = {
     siteMetadata: {
         title: 'Jeff Rescignano',
@@ -133,6 +135,22 @@ module.exports = {
                 allowCache: true,
                 maxCacheDurationSeconds: 60 * 60 * 24,
                 verboseOutput: false,
+            }
+        },
+        {
+            resolve: 'gatsby-plugin-git-clone',
+            options: {
+                repository: 'https://github.com/JeffResc/OneTracker-API',
+                branch: 'docs',
+                path: resolve(__dirname, './static/OneTracker-API')
+            }
+        },
+        {
+            resolve: 'gatsby-plugin-git-clone',
+            options: {
+                repository: 'https://github.com/JeffResc/Unmanic-API',
+                branch: 'docs',
+                path: resolve(__dirname, './static/Unmanic-API')
             }
         },
         {
