@@ -5,6 +5,7 @@ module.exports = {
         title: 'Jeff Rescignano',
         siteUrl: 'https://jeffresc.dev/'
     },
+    trailingSlash: 'always',
     plugins: [
         'gatsby-plugin-postcss',
         'gatsby-plugin-image',
