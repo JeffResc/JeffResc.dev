@@ -174,6 +174,7 @@ module.exports = {
                     timeZoneName: 'short',
                 },
             },
-        }
+        },
+        'gatsby-plugin-meta-redirect'
     ]
 };
