@@ -16,8 +16,8 @@
         "deploy": "gatsby-plugin-s3 deploy"
     },
     "dependencies": {
-        "@mdx-js/mdx": "^2.1.2",
-        "@mdx-js/react": "^2.1.2",
+        "@mdx-js/mdx": "v1",
+        "@mdx-js/react": "v1",
         "@react-icons/all-files": "^4.1.0",
         "autoprefixer": "^10.4.7",
         "dayjs": "^1.11.3",
