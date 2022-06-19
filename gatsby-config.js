@@ -176,7 +176,7 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-s3`,
+            resolve: 'gatsby-plugin-s3',
             options: {
                 bucketName: process.env.AWS_BUCKET,
                 region: process.env.AWS_REGION,
