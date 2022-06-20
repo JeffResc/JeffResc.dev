@@ -175,6 +175,13 @@ module.exports = {
                 },
             },
         },
-        'gatsby-plugin-meta-redirect'
+        {
+            resolve: 'gatsby-plugin-s3',
+            options: {
+                bucketName: process.env.AWS_BUCKET,
+                region: process.env.AWS_REGION,
+                acl: null
+            },
+        },
     ]
 };

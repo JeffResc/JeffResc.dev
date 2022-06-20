@@ -30,9 +30,4 @@ exports.createPages = async({ graphql, actions }) => {
         component: blogIndex
     });
     /* END BLOG PAGINATION */
-
-    /* REDIRECTS */
-    const { createRedirect } = actions
-    /* LEGACY BLOG URLS */
-    createRedirect({ fromPath: '/blog/2020-10-10', toPath: '/blog/sonoff-d1-dimmer-running-esphome', isPermanent: true });
 }
