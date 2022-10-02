@@ -30,9 +30,17 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_BUCKET: ${{ secrets.AWS_BUCKET }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
-      - name: Cloudflare Purge Cache
-        uses: jakejarvis/cloudflare-purge-action@v0.3.0
-        if: github.ref == 'refs/heads/production'
-        env:
-          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
-          CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
+      #- name: Invalidate CloudFront
+      #  uses: chetan/invalidate-cloudfront-action@v2
+      #  env:
+      #    DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION }}
+      #    PATHS: "/index.html"
+      #    AWS_REGION: "us-east-1"
+      #    AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #    AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #- name: Cloudflare Purge Cache
+      #  uses: jakejarvis/cloudflare-purge-action@v0.3.0
+      #  if: github.ref == 'refs/heads/production'
+      #  env:
+      #    CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+      #    CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
