@@ -6,7 +6,7 @@ function if_subtitle(subtitle) {
   if (subtitle !== "false") {
     return (
       <p className="mt-8 text-xl text-white">
-        I'm a Junior at Clarkson University studying Computer Science.
+        I'm a Senior at Clarkson University studying Computer Science with a dual minor in Mathematics and Communication.
       </p>
     )
   }
