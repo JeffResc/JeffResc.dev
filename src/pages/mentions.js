@@ -12,7 +12,7 @@ export default function MediaMentions({ data }) {
         <link rel="canonical" href="https://jeffresc.dev/mentions/" />
       </Helmet>
       <TinyHero title="Media Mentions" />
-      <div className="container mx-auto flex flex-col items-center px-4 pb-8 pt-16 text-center xl:max-w-3xl">
+      <div className="container mx-auto flex flex-col items-center px-4 pb-8 text-center xl:max-w-3xl">
         <p>
           <a href="https://www.idownloadblog.com/2019/03/20/meteoroid/" class="text-sky-400 after:content-['_↗']"><strong>iDownloadBlog</strong>: <i>Meteoroid automatically sets your wallpaper from various NASA image sources</i> by Anthony Bouchard (March 19, 2019)</a>
           <br />
