@@ -12,7 +12,7 @@ import ProjectCard from "../components/ProjectCard"
 
 export default function IndexPage({ data }) {
   return (
-    <Layout pageTitle="Jeff Rescignano" pageDescription="Hi, I'm Jeff Rescignano. I'm a Junior at Clarkson University studying Computer Science. This is my development portfolio and blog!">
+    <Layout pageTitle="Jeff Rescignano" pageDescription="Hi, I'm Jeff Rescignano. I'm a Senior at Clarkson University studying Computer Science with a dual minor in Mathematics and Communication. This is my development portfolio and blog!">
       <Helmet>
         <link rel="canonical" href="https://jeffresc.dev/" />
         <script type='application/ld+json'>
