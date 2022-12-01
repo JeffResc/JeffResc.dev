@@ -19,7 +19,7 @@
         "@mdx-js/mdx": "v1",
         "@mdx-js/react": "v1",
         "@react-icons/all-files": "^4.1.0",
-        "autoprefixer": "^10.4.7",
+        "autoprefixer": "^10.4.13",
         "dayjs": "^1.11.6",
         "gatsby": "^4.16.0",
         "gatsby-awesome-pagination": "^0.3.8",
