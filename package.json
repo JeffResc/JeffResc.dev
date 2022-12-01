@@ -25,7 +25,7 @@
         "gatsby-awesome-pagination": "^0.3.8",
         "gatsby-plugin-git-clone": "^0.1.0",
         "gatsby-plugin-image": "^2.16.1",
-        "gatsby-plugin-matomo": "^0.13.0",
+        "gatsby-plugin-matomo": "^0.14.0",
         "gatsby-plugin-mdx": "^3.20.0",
         "gatsby-plugin-next-seo": "^1.10.0",
         "gatsby-plugin-postcss": "^5.24.0",
