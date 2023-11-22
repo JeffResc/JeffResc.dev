@@ -3,13 +3,13 @@ const resolve = require('path').resolve;
 module.exports = {
     siteMetadata: {
         title: 'Jeff Rescignano',
-        siteUrl: 'https://jeffresc.dev/'
+        siteUrl: 'https://jeffresc.dev/',
+        siteUrlNoSlash: 'https://jeffresc.dev',
     },
     plugins: [
         'gatsby-plugin-postcss',
         'gatsby-plugin-image',
         'gatsby-plugin-react-helmet',
-        'gatsby-plugin-sitemap',
         'gatsby-plugin-next-seo',
         {
             resolve: `gatsby-plugin-sharp`,
@@ -115,6 +115,39 @@ module.exports = {
                 path: `${__dirname}/blog`,
             },
             __key: 'blog'
+        },
+        {
+            resolve: 'gatsby-plugin-sitemap',
+            options: {
+                query: `
+                    {
+                        allMdx {
+                            nodes {
+                                slug
+                                modified_date
+                            }
+                        }
+                    }
+                `,
+                serialize: ({ site, allSitePage, allMdx }) => {
+                    let pages = []
+                    allSitePage.edges.map(edge => {
+                        pages.push({
+                            url: site.siteMetadata.siteUrlNoSlash + edge.node.path,
+                            changefreq: `daily`,
+                            priority: 0.7,
+                        })
+                    })
+                    allMdx.edges.map(edge => {
+                        pages.push({
+                            url: `${site.siteMetadata.siteUrlNoSlash}/${edge.node.fields.slug}`,
+                            changefreq: `daily`,
+                            priority: 0.7,
+                        })
+                    })
+                    return pages
+                },
+            },
         },
         {
             resolve: 'gatsby-plugin-matomo',
