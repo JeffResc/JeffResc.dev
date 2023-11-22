@@ -41,7 +41,7 @@
         "gatsby-source-apiserver": "^2.1.8",
         "gatsby-source-build-date": "^1.0.1",
         "gatsby-source-filesystem": "^4.24.0",
-        "gatsby-transformer-sharp": "^4.24.0",
+        "gatsby-transformer-sharp": "^4.25.0",
         "postcss": "^8.4.31",
         "prism-react-renderer": "^2.3.0",
         "prismjs": "^1.29.0",
