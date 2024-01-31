@@ -35,7 +35,7 @@
         "gatsby-plugin-sitemap": "^5.25.0",
         "gatsby-remark-autolink-headers": "^5.25.0",
         "gatsby-remark-classes": "^1.0.2",
-        "gatsby-remark-images": "^6.25.0",
+        "gatsby-remark-images": "^7.13.1",
         "gatsby-remark-prismjs": "^6.25.0",
         "gatsby-remark-table-of-contents": "^2.0.0",
         "gatsby-source-apiserver": "^2.1.8",
