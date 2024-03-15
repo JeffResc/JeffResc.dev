@@ -12,7 +12,7 @@ import ProjectCard from "../components/ProjectCard"
 
 export default function IndexPage({ data }) {
   return (
-    <Layout pageTitle="Jeff Rescignano" pageDescription="Hi, I'm Jeff Rescignano. I'm a Clarkson University graduate who studied Computer Science with minors in Mathematics and Communication. This is my development portfolio and blog!">
+    <Layout pageTitle="Jeff Rescignano" pageDescription="Hi, I'm Jeff Rescignano. I'm a Cloud, Infrastructure and DevSecOps Engineer. This is my development portfolio and blog!">
       <Helmet>
         <link rel="canonical" href="https://jeffresc.dev/" />
         <script type='application/ld+json'>
@@ -22,7 +22,7 @@ export default function IndexPage({ data }) {
             "givenName": "Jeffrey",
             "familyName": "Rescignano",
             "nationality": "American",
-            "description": "Clarkson University graduate who studied Computer Science with minors in Mathematics and Communication",
+            "description": "Cloud, Infrastructure, DevSecOps Engineer",
             "jobTitle": "Student",
             "url": "https://jeffresc.dev/",
             "image": "https://jeffresc.dev/img/Profile.jpg",
@@ -34,7 +34,6 @@ export default function IndexPage({ data }) {
             },
             "homeLocation": {
               "address": {
-                "addressRegion": "NY",
                 "addressCountry": "United States"
               }
             },
