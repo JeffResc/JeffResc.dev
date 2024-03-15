@@ -22,7 +22,7 @@ export default function IndexPage({ data }) {
             "givenName": "Jeffrey",
             "familyName": "Rescignano",
             "nationality": "American",
-            "description": "Cloud, Infrastructure, DevSecOps Enginner",
+            "description": "Cloud, Infrastructure, DevSecOps Engineer",
             "jobTitle": "Student",
             "url": "https://jeffresc.dev/",
             "image": "https://jeffresc.dev/img/Profile.jpg",
