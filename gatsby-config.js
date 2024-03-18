@@ -141,22 +141,6 @@ module.exports = {
             }
         },
         {
-            resolve: 'gatsby-plugin-git-clone',
-            options: {
-                repository: 'https://github.com/JeffResc/OneTracker-API',
-                branch: 'docs',
-                path: resolve(__dirname, './static/OneTracker-API')
-            }
-        },
-        {
-            resolve: 'gatsby-plugin-git-clone',
-            options: {
-                repository: 'https://github.com/JeffResc/Unmanic-API',
-                branch: 'docs',
-                path: resolve(__dirname, './static/Unmanic-API')
-            }
-        },
-        {
             resolve: 'gatsby-source-build-date',
             options: {
                 // Generate ISO8601 date.
@@ -173,14 +157,6 @@ module.exports = {
                     hour12: false,
                     timeZoneName: 'short',
                 },
-            },
-        },
-        {
-            resolve: 'gatsby-plugin-s3',
-            options: {
-                bucketName: process.env.AWS_BUCKET,
-                region: process.env.AWS_REGION,
-                acl: null
             },
         },
     ]
