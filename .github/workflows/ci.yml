@@ -29,7 +29,7 @@ jobs:
           git-config-email: jeff@jeffresc.dev
           commit-message: Auto Deploy From GitHub Actions
           single-commit: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          folder: build
+          folder: public
           clean: true
