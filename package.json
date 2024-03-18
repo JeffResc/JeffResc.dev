@@ -12,8 +12,7 @@
         "start": "gatsby develop",
         "build": "gatsby build",
         "serve": "gatsby serve",
-        "clean": "gatsby clean",
-        "deploy": "gatsby-plugin-s3 deploy"
+        "clean": "gatsby clean"
     },
     "dependencies": {
         "@mdx-js/mdx": "v1",
@@ -23,14 +22,12 @@
         "dayjs": "^1.11.10",
         "gatsby": "^4.25.8",
         "gatsby-awesome-pagination": "^0.3.8",
-        "gatsby-plugin-git-clone": "^0.1.0",
         "gatsby-plugin-image": "^2.16.1",
         "gatsby-plugin-matomo": "^0.16.2",
         "gatsby-plugin-mdx": "^3.20.0",
         "gatsby-plugin-next-seo": "^1.11.0",
         "gatsby-plugin-postcss": "^6.13.1",
         "gatsby-plugin-react-helmet": "^5.25.0",
-        "gatsby-plugin-s3": "^0.4.1",
         "gatsby-plugin-sharp": "^5.13.1",
         "gatsby-plugin-sitemap": "^6.13.1",
         "gatsby-remark-autolink-headers": "^6.13.1",
