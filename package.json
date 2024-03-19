@@ -15,7 +15,7 @@
         "clean": "gatsby clean"
     },
     "dependencies": {
-        "@mdx-js/mdx": "v1",
+        "@mdx-js/mdx": "v3",
         "@mdx-js/react": "v1",
         "@react-icons/all-files": "^4.1.0",
         "autoprefixer": "^10.4.18",
