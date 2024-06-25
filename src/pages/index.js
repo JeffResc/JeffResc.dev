@@ -42,7 +42,7 @@ export default function IndexPage({ data }) {
         </script>
       </Helmet>
       <Hero subtitle="true" />
-      <TinyHero title="Languages" />
+      {/* <TinyHero title="Languages" />
       <IconsDisplay>
         <span title="Python">
           <StaticImage src="../images/icons/python-5.svg" alt="Python" placeholder="blurred" height={64} key="1" />
@@ -113,7 +113,7 @@ export default function IndexPage({ data }) {
         <span title="LaTeX">
           <StaticImage src="../images/icons/latex.png" alt="LaTeX" placeholder="blurred" height={64} key="22" />
         </span>
-      </IconsDisplay>
+      </IconsDisplay> */}
       <TinyHero title="Top GitHub Projects" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {data.allInternalRepos.edges.map((project) => (
