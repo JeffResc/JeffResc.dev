@@ -20,7 +20,7 @@
         "@react-icons/all-files": "^4.1.0",
         "autoprefixer": "^10.4.19",
         "dayjs": "^1.11.13",
-        "gatsby": "^4.25.8",
+        "gatsby": "^4.25.9",
         "gatsby-awesome-pagination": "^0.3.8",
         "gatsby-plugin-image": "^3.13.1",
         "gatsby-plugin-matomo": "^0.16.2",
