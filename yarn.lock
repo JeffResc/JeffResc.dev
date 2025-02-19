@@ -2306,10 +2306,15 @@
   resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.0.33.tgz#1073c4bc824754ae3d10cfab88ab0237ba964e4d"
   integrity sha512-gVC1InwyVrO326wbBZw+AO3u2vRXz/iRWq9jYhpG4W8LXyIgDv3ZmcLQ5Q4Gs+gFMyqx+viFoFT+l3p61QFCmQ==
 
-"@types/unist@*", "@types/unist@^2.0.0", "@types/unist@^2.0.2", "@types/unist@^2.0.3":
+"@types/unist@*", "@types/unist@^2.0.2", "@types/unist@^2.0.3":
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.6.tgz#250a7b16c3b91f672a24552ec64678eeb1d3a08d"
   integrity sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==
+
+"@types/unist@^2.0.0":
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.11.tgz#11af57b127e32487774841f7a4e54eab166d03c4"
+  integrity sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==
 
 "@types/vfile-message@*":
   version "2.0.0"
@@ -6556,9 +6561,9 @@ gatsby-react-router-scroll@^5.25.0:
     prop-types "^15.8.1"
 
 gatsby-remark-autolink-headers@^6.13.1:
-  version "6.13.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-6.13.1.tgz#013ba7ef0ff7e754c9e458e307a2eee6fdb552ea"
-  integrity sha512-nKmmA2n4xJnMV6AR+QPU7eQzjxoseLfGcNlT7k43goPRhDkRgL4DsXOMs8d06ZrAmJf8Wps5LVg+KtUUGBkjxw==
+  version "6.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-6.14.0.tgz#7a37104b30c55eb666fbd4824294d90b22dc3743"
+  integrity sha512-hQkhnj1mMLR+Nd3VjCvgJjGGnrNZcNh+dnFyi9qv5nKtbo24yf2vS99v5c+0KLw9d90kSmdpiEkvA+Bhbh9Kzg==
   dependencies:
     "@babel/runtime" "^7.20.13"
     github-slugger "^1.5.0"
