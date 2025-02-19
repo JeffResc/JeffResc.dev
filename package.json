@@ -23,7 +23,7 @@
         "gatsby": "^4.25.9",
         "gatsby-awesome-pagination": "^0.3.8",
         "gatsby-plugin-image": "^3.13.1",
-        "gatsby-plugin-matomo": "^0.16.2",
+        "gatsby-plugin-matomo": "^0.17.0",
         "gatsby-plugin-mdx": "^3.20.0",
         "gatsby-plugin-next-seo": "^1.11.0",
         "gatsby-plugin-postcss": "^6.13.1",
