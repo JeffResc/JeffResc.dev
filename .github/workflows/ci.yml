@@ -22,7 +22,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy pages
-        if: github.ref == 'refs/heads/production'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           git-config-name: Jeff Rescignano (Auto Deploy)
