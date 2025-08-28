@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Matrix Desk</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            overflow: hidden;
+            font-family: 'Courier New', monospace;
+            animation: backgroundShift 8s ease-in-out infinite;
+        }
+
+        @keyframes backgroundShift {
+            0% { background: radial-gradient(circle at 25% 25%, #001122 0%, #000 70%); }
+            25% { background: radial-gradient(circle at 75% 25%, #220011 0%, #000 70%); }
+            50% { background: radial-gradient(circle at 75% 75%, #110022 0%, #000 70%); }
+            75% { background: radial-gradient(circle at 25% 75%, #002211 0%, #000 70%); }
+            100% { background: radial-gradient(circle at 25% 25%, #001122 0%, #000 70%); }
+        }
+
+        #matrix-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .unicorn-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            animation: spin 3s linear infinite;
+        }
+
+        .unicorn {
+            width: 400px;
+            height: 400px;
+            font-size: 350px;
+            color: #ff69b4;
+            text-shadow: 0 0 40px #ff69b4, 0 0 80px #ff69b4, 0 0 120px #ff69b4;
+            filter: drop-shadow(0 0 30px #9d4edd) drop-shadow(0 0 60px #00ffff);
+        }
+
+        @keyframes spin {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        @keyframes glow {
+            0% { 
+                text-shadow: 0 0 40px #ff0080, 0 0 80px #ff0080, 0 0 120px #ff0080;
+                filter: drop-shadow(0 0 30px #ff0080) drop-shadow(0 0 60px #00ffff) hue-rotate(0deg);
+            }
+            16% { 
+                text-shadow: 0 0 40px #8000ff, 0 0 80px #8000ff, 0 0 120px #8000ff;
+                filter: drop-shadow(0 0 30px #8000ff) drop-shadow(0 0 60px #ff8000) hue-rotate(60deg);
+            }
+            33% { 
+                text-shadow: 0 0 40px #0080ff, 0 0 80px #0080ff, 0 0 120px #0080ff;
+                filter: drop-shadow(0 0 30px #0080ff) drop-shadow(0 0 60px #80ff00) hue-rotate(120deg);
+            }
+            50% { 
+                text-shadow: 0 0 40px #00ff80, 0 0 80px #00ff80, 0 0 120px #00ff80;
+                filter: drop-shadow(0 0 30px #00ff80) drop-shadow(0 0 60px #ff0080) hue-rotate(180deg);
+            }
+            66% { 
+                text-shadow: 0 0 40px #80ff00, 0 0 80px #80ff00, 0 0 120px #80ff00;
+                filter: drop-shadow(0 0 30px #80ff00) drop-shadow(0 0 60px #8000ff) hue-rotate(240deg);
+            }
+            83% { 
+                text-shadow: 0 0 40px #ff8000, 0 0 80px #ff8000, 0 0 120px #ff8000;
+                filter: drop-shadow(0 0 30px #ff8000) drop-shadow(0 0 60px #0080ff) hue-rotate(300deg);
+            }
+            100% { 
+                text-shadow: 0 0 40px #ff0080, 0 0 80px #ff0080, 0 0 120px #ff0080;
+                filter: drop-shadow(0 0 30px #ff0080) drop-shadow(0 0 60px #00ffff) hue-rotate(360deg);
+            }
+        }
+
+        .unicorn {
+            animation: glow 1.5s linear infinite, pulse 0.8s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrix-canvas"></canvas>
+    <div class="unicorn-container">
+        <div class="unicorn">🦄</div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const matrix = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=[]{}|;':\",./<>?";
+        const matrixArray = matrix.split("");
+
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+
+        const drops = [];
+        for (let x = 0; x < columns; x++) {
+            drops[x] = 1;
+        }
+
+        let time = 0;
+        const cyberpunkColors = [
+            ['#ff0080', '#8000ff', '#0080ff'],
+            ['#00ff80', '#ff8000', '#8000ff'],
+            ['#ff0040', '#4000ff', '#0040ff'],
+            ['#80ff00', '#ff4000', '#4080ff'],
+            ['#ff0099', '#9900ff', '#0099ff'],
+            ['#99ff00', '#ff9900', '#0099ff']
+        ];
+
+        function draw() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.03)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.font = fontSize + 'px Courier New';
+            time += 0.1;
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
+                
+                const colorSetIndex = Math.floor((time + i * 0.1) % cyberpunkColors.length);
+                const colors = cyberpunkColors[colorSetIndex];
+                
+                const gradient = ctx.createLinearGradient(0, drops[i] * fontSize - 150, 0, drops[i] * fontSize);
+                gradient.addColorStop(0, colors[0]);
+                gradient.addColorStop(0.5, colors[1]);
+                gradient.addColorStop(1, colors[2]);
+                
+                ctx.fillStyle = gradient;
+                ctx.shadowColor = colors[1];
+                ctx.shadowBlur = 15 + Math.sin(time + i) * 5;
+                
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 25);
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
