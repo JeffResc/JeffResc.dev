@@ -1,0 +1,9 @@
+{
+  "subject": "acct:jeff@jeffresc.dev",
+  "links": [
+    {
+      "rel": "http://openid.net/specs/connect/1.0/issuer",
+      "href": "https://keycloak.jeffresc.xyz/realms/xyz"
+    }
+  ]
+}

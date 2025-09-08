@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://jeffresc.dev/sitemap/sitemap-index.xml
