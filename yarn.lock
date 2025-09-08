@@ -1174,9 +1174,9 @@
     regenerator-runtime "^0.14.0"
 
 "@babel/runtime@^7.20.13":
-  version "7.28.3"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.28.3.tgz#75c5034b55ba868121668be5d5bb31cc64e6e61a"
-  integrity sha512-9uIQ10o0WGdpP6GDhXcdOJPJuDgFtIDtN/9+ArJQ2NAfAmiuhTQdzkaTGR33v43GYS2UrSA0eX2pPPHoFVvpxA==
+  version "7.28.4"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.28.4.tgz#a70226016fabe25c5783b2f22d3e1c9bc5ca3326"
+  integrity sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ==
 
 "@babel/template@^7.12.7", "@babel/template@^7.16.7":
   version "7.16.7"
@@ -6728,9 +6728,9 @@ gatsby-react-router-scroll@^5.25.0:
     prop-types "^15.8.1"
 
 gatsby-remark-autolink-headers@^6.13.1:
-  version "6.14.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-6.14.0.tgz#7a37104b30c55eb666fbd4824294d90b22dc3743"
-  integrity sha512-hQkhnj1mMLR+Nd3VjCvgJjGGnrNZcNh+dnFyi9qv5nKtbo24yf2vS99v5c+0KLw9d90kSmdpiEkvA+Bhbh9Kzg==
+  version "6.15.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-6.15.0.tgz#28a8dc48488498ed45df3184d7c1a3275362ab57"
+  integrity sha512-DXUcMqbWZIKMwIk5+EhSwfnaQMOKAs8+InVVpCLdV1Dl/Jgt+QpwLOEuaao9wDPTXQY67PGglnc6MNjoF6XM+A==
   dependencies:
     "@babel/runtime" "^7.20.13"
     github-slugger "^1.5.0"
